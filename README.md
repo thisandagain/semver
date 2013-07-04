@@ -1,9 +1,42 @@
 ## Semver
 
-### Getting Started
-The quickest way to get started with `EDSemver` is to add the `EDSemver` directory to your project and...
+### Basic Use
 ```objective-c
 #import "EDSemver.h"
+```
+
+```objective-c
+BOOL lt = [EDSemver version:@"v1.1.3" isLessThan:@"v1.4.1-alpha2"];
+return lt;  // YES
+```
+
+---
+
+### Versions
+
+
+### Methods
+```objective-c
+- (BOOL)isValid:(NSString *)ver;
+- (NSString *)sanitize:(NSString *)ver;
+
+- (BOOL)version:(NSString *)ver isEqualTo:(NSString *)input;
+- (BOOL)version:(NSString *)ver isGreaterThan:(NSString *)input;
+- (BOOL)version:(NSString *)ver isGreaterThanOrEqualTo:(NSString *)input;
+- (BOOL)version:(NSString *)ver isLessThan:(NSString *)input;
+- (BOOL)version:(NSString *)ver isLessThanOrEqualTo:(NSString *)input;
+```
+
+### NSString+Semver
+Alternatively, EDSemver can be used as a category of NSString. When used in this way, the interface is slightly more lightweight at the expense of being less explicit:
+
+```objective-c
+#import "NSString+Semver.h"
+```
+
+```objective-c
+BOOL gt = [@"v1.4.8-alpha5" isGreaterThan:@"v4.8"];
+return gt;  // NO
 ```
 
 ---

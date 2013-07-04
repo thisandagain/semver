@@ -25,6 +25,8 @@
 		C3903845178615E400ECBCAC /* semverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3903844178615E400ECBCAC /* semverTests.m */; };
 		C39038501786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
 		C39038511786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
+		C390385817861E8800ECBCAC /* NSString+Semver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390385717861E8800ECBCAC /* NSString+Semver.m */; };
+		C390385917861E8800ECBCAC /* NSString+Semver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390385717861E8800ECBCAC /* NSString+Semver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		C3903853178616E500ECBCAC /* EDSemver.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = EDSemver.podspec; path = ../EDSemver.podspec; sourceTree = "<group>"; };
 		C3903854178616E500ECBCAC /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		C3903855178616E500ECBCAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C390385617861E8800ECBCAC /* NSString+Semver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Semver.h"; path = "../EDSemver/NSString+Semver.h"; sourceTree = "<group>"; };
+		C390385717861E8800ECBCAC /* NSString+Semver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Semver.m"; path = "../EDSemver/NSString+Semver.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 			children = (
 				C390384E1786166E00ECBCAC /* EDSemver.h */,
 				C390384F1786166E00ECBCAC /* EDSemver.m */,
+				C390385617861E8800ECBCAC /* NSString+Semver.h */,
+				C390385717861E8800ECBCAC /* NSString+Semver.m */,
 			);
 			name = EDSemver;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 				C3903824178615E400ECBCAC /* EDAppDelegate.m in Sources */,
 				C390382D178615E400ECBCAC /* EDViewController.m in Sources */,
 				C39038501786166E00ECBCAC /* EDSemver.m in Sources */,
+				C390385817861E8800ECBCAC /* NSString+Semver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +313,7 @@
 			files = (
 				C3903845178615E400ECBCAC /* semverTests.m in Sources */,
 				C39038511786166E00ECBCAC /* EDSemver.m in Sources */,
+				C390385917861E8800ECBCAC /* NSString+Semver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
