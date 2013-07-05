@@ -8,18 +8,35 @@
 
 #import "EDSemverValid.h"
 
+@interface EDSemverValid ()
+@property NSArray *validList;
+@property NSArray *invalidList;
+@end
+
 @implementation EDSemverValid
+
+- (void)setUp
+{
+    [super setUp];
+    
+    _validList = @[@"1.2.3", @"v1.2.3", @"1.2.3-foo", @"1.0.0-alpha", @"1.0-alpha", @"1-alpha", @"   1.2.3", @"1.2.3 "];
+    _invalidList = @[@"", @"=1.2.3", @"1.2.3foo", @"alpha"];
+}
 
 - (void)testValidTrue
 {
-    EDSemver *ver = [[EDSemver alloc] initWithString:@"1.0.0"];
-    STAssertTrue([ver isValid], VALID_DESC);
+    for (int i = 0; i < [_validList count]; i++) {
+        EDSemver *ver = [[EDSemver alloc] initWithString:[_validList objectAtIndex:i]];
+        STAssertTrue([ver isValid], VALID_DESC);
+    }
 }
 
 - (void)testValidFalse
 {
-    EDSemver *ver = [[EDSemver alloc] initWithString:@"alpha"];
-    STAssertFalse([ver isValid], VALID_DESC);
+    for (int i = 0; i < [_invalidList count]; i++) {
+        EDSemver *ver = [[EDSemver alloc] initWithString:[_invalidList objectAtIndex:i]];
+        STAssertFalse([ver isValid], VALID_DESC);
+    }
 }
 
 @end

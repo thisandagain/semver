@@ -14,8 +14,8 @@
 @property (readonly) int major;
 @property (readonly) int minor;
 @property (readonly) int patch;
-@property (readonly, weak) NSString *prerelease;
-@property (readonly, weak) NSString *build;
+@property (readonly) NSString *prerelease;
+@property (readonly) NSString *build;
 
 - (id)initWithString:(NSString *)input;
 

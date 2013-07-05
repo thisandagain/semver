@@ -13,8 +13,11 @@
 @property (readwrite) int major;
 @property (readwrite) int minor;
 @property (readwrite) int patch;
-@property (readwrite, weak) NSString *prerelease;
-@property (readwrite, weak) NSString *build;
+@property (readwrite) NSString *prerelease;
+@property (readwrite) NSString *build;
+
+@property NSString *original;
+@property NSArray *version;
 @end
 
 @implementation EDSemver
@@ -31,26 +34,37 @@ static NSString const *IGNORE_PREFIX            = @"v";
     self = [super init];
     if (self) {
         // Parse
-        NSArray *version = [self parse:input];
+        _original = input;
+        _version = [self parse:input];
         
-        // Set properites
-        _major = [[version objectAtIndex:0] intValue];
-        _minor = [[version objectAtIndex:1] intValue];
-        _patch = [[version objectAtIndex:2] intValue];
-        _prerelease = [version objectAtIndex:3];
-        _build = [version objectAtIndex:4];
-        
-        // Check
-        _isValid = [self check:input];
+        // Check & set properties
+        _isValid = [self check];
+        if (_isValid) {
+            _major = [[_version objectAtIndex:0] intValue];
+            _minor = [[_version objectAtIndex:1] intValue];
+            _patch = [[_version objectAtIndex:2] intValue];
+            _prerelease = [_version objectAtIndex:3];
+            _build = [_version objectAtIndex:4];
+        }
     }
     return self;
 }
 
 #pragma mark - Private methods
 
-- (BOOL)check:(NSString *)input
+- (BOOL)check
 {
-    return !(_major == 0 && _minor == 0 && _patch == 0);
+    // Edge cases
+    if (_original == nil) return NO;
+    if ([_original isEqualToString:@""]) return NO;
+
+    // Check that major, minor, and patch values are numbers
+    NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
+    for (int i = 0; i < 3; i++) {
+        if ([nf numberFromString:[_version objectAtIndex:i]] == nil) return NO;
+    }
+    
+    return YES;
 }
 
 - (NSArray *)parse:(NSString *)input
@@ -59,10 +73,13 @@ static NSString const *IGNORE_PREFIX            = @"v";
     NSString *build         = @"";
     NSString *prerelease    = @"";
     
-    // Strip prefix
-    if ([[input substringWithRange:NSMakeRange(0, 1)] isEqualToString:(NSString *)IGNORE_PREFIX]) {
-        input = [input substringFromIndex:1];
-    };
+    // Strip whitespace & prefix
+    if (input.length > 0) {
+        input = [input stringByReplacingOccurrencesOfString:@" " withString:@""];
+        if ([[input substringWithRange:NSMakeRange(0, 1)] isEqualToString:(NSString *)IGNORE_PREFIX]) {
+            input = [input substringFromIndex:1];
+        };
+    }
     
     // Build
     NSArray *b = [input componentsSeparatedByString:(NSString *)BUILD_DELIMITER];
