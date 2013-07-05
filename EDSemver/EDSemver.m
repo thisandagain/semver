@@ -50,6 +50,28 @@ static NSString const *IGNORE_PREFIX            = @"v";
     return self;
 }
 
+#pragma mark - Public methods
+
+- (BOOL)isEqualTo:(EDSemver *)input
+{
+    if (![self isValid] || ![input isValid]) return NO;
+    if ([self major] != [input major]) return NO;
+    if ([self minor] != [input minor]) return NO;
+    if ([self patch] != [input patch]) return NO;
+    
+    return YES;
+}
+
+- (BOOL)isLessThan:(EDSemver *)input
+{
+    return NO;
+}
+
+- (BOOL)isGreaterThan:(EDSemver *)input
+{
+    return NO;
+}
+
 #pragma mark - Private methods
 
 - (BOOL)check

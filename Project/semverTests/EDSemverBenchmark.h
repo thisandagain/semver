@@ -1,14 +1,13 @@
 //
-//  NSString+Semver.m
+//  EDSemverBenchmark.h
 //  semver
 //
 //  Created by Andrew Sliwinski on 7/4/13.
 //  Copyright (c) 2013 Andrew Sliwinski. All rights reserved.
 //
 
-#import "NSString+Semver.h"
-#import "EDSemver.h"
+#import "EDSemverHarness.h"
 
-@implementation NSString (Semver)
+@interface EDSemverBenchmark : SenTestCase
 
 @end

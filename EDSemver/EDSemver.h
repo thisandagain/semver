@@ -18,5 +18,8 @@
 @property (readonly) NSString *build;
 
 - (id)initWithString:(NSString *)input;
+- (BOOL)isEqualTo:(EDSemver *)input;
+- (BOOL)isLessThan:(EDSemver *)input;
+- (BOOL)isGreaterThan:(EDSemver *)input;
 
 @end

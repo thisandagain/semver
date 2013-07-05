@@ -15,3 +15,5 @@
 #define PRERELEASE_DESC @"Prerelease equals expected value."
 #define BUILD_DESC @"Build equals expected value."
 #define VALID_DESC @"Validity is of expected value."
+#define EQUAL_DESC @"Equality is of expected value."
+#define COMP_DESC @"Comparator is of expected value."
