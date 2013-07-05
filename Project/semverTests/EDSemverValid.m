@@ -20,7 +20,7 @@
     [super setUp];
     
     _validList = @[@"1.2.3", @"v1.2.3", @"1.2.3-foo", @"1.0.0-alpha", @"1.0-alpha", @"1-alpha", @"   1.2.3", @"1.2.3 "];
-    _invalidList = @[@"", @"=1.2.3", @"1.2.3foo", @"alpha"];
+    _invalidList = @[@"", @"z1.2.3", @"1.2.3foo", @"alpha"];
 }
 
 - (void)testValidTrue

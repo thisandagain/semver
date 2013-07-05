@@ -26,6 +26,7 @@ static NSString const *BUILD_DELIMITER          = @"+";
 static NSString const *PRERELEASE_DELIMITER     = @"-";
 static NSString const *VERSION_DELIMITER        = @".";
 static NSString const *IGNORE_PREFIX            = @"v";
+static NSString const *IGNORE_EQ                = @"=";
 
 #pragma mark - Init
 
@@ -99,6 +100,9 @@ static NSString const *IGNORE_PREFIX            = @"v";
     if (input.length > 0) {
         input = [input stringByReplacingOccurrencesOfString:@" " withString:@""];
         if ([[input substringWithRange:NSMakeRange(0, 1)] isEqualToString:(NSString *)IGNORE_PREFIX]) {
+            input = [input substringFromIndex:1];
+        };
+        if ([[input substringWithRange:NSMakeRange(0, 1)] isEqualToString:(NSString *)IGNORE_EQ]) {
             input = [input substringFromIndex:1];
         };
     }

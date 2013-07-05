@@ -60,4 +60,14 @@
     STAssertEqualObjects(@"1", [ver build], BUILD_DESC);
 }
 
+- (void)testParseComplex
+{
+    EDSemver *ver = [[EDSemver alloc] initWithString:@"v1.2.23-alpha+1.833"];
+    STAssertEquals(1, [ver major], MAJOR_DESC);
+    STAssertEquals(2, [ver minor], MINOR_DESC);
+    STAssertEquals(23, [ver patch], PATCH_DESC);
+    STAssertEqualObjects(@"alpha", [ver prerelease], PRERELEASE_DESC);
+    STAssertEqualObjects(@"1.833", [ver build], BUILD_DESC);
+}
+
 @end
