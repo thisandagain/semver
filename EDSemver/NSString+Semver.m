@@ -7,6 +7,7 @@
 //
 
 #import "NSString+Semver.h"
+#import "EDSemver.h"
 
 @implementation NSString (Semver)
 

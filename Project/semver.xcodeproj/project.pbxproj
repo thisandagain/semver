@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C381967817865BA500C5FE78 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
+		C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
 		C3903814178615E400ECBCAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903813178615E400ECBCAC /* UIKit.framework */; };
 		C3903816178615E400ECBCAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903815178615E400ECBCAC /* Foundation.framework */; };
 		C3903818178615E400ECBCAC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903817178615E400ECBCAC /* CoreGraphics.framework */; };
@@ -22,7 +24,6 @@
 		C3903839178615E400ECBCAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903813178615E400ECBCAC /* UIKit.framework */; };
 		C390383A178615E400ECBCAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903815178615E400ECBCAC /* Foundation.framework */; };
 		C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3903840178615E400ECBCAC /* InfoPlist.strings */; };
-		C3903845178615E400ECBCAC /* semverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3903844178615E400ECBCAC /* semverTests.m */; };
 		C39038501786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
 		C39038511786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
 		C390385817861E8800ECBCAC /* NSString+Semver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390385717861E8800ECBCAC /* NSString+Semver.m */; };
@@ -40,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C381967617865BA500C5FE78 /* EDSemverParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverParse.h; sourceTree = "<group>"; };
+		C381967717865BA500C5FE78 /* EDSemverParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverParse.m; sourceTree = "<group>"; };
+		C381967917865C0A00C5FE78 /* EDSemverHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverHarness.h; sourceTree = "<group>"; };
+		C381967D17865CB600C5FE78 /* EDSemverValid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverValid.h; sourceTree = "<group>"; };
+		C381967E17865CB600C5FE78 /* EDSemverValid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverValid.m; sourceTree = "<group>"; };
 		C3903810178615E400ECBCAC /* semver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = semver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3903813178615E400ECBCAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3903815178615E400ECBCAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,8 +66,6 @@
 		C3903837178615E400ECBCAC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C390383F178615E400ECBCAC /* semverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "semverTests-Info.plist"; sourceTree = "<group>"; };
 		C3903841178615E400ECBCAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C3903843178615E400ECBCAC /* semverTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = semverTests.h; sourceTree = "<group>"; };
-		C3903844178615E400ECBCAC /* semverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = semverTests.m; sourceTree = "<group>"; };
 		C390384E1786166E00ECBCAC /* EDSemver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EDSemver.h; path = ../EDSemver/EDSemver.h; sourceTree = "<group>"; };
 		C390384F1786166E00ECBCAC /* EDSemver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EDSemver.m; path = ../EDSemver/EDSemver.m; sourceTree = "<group>"; };
 		C3903853178616E500ECBCAC /* EDSemver.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = EDSemver.podspec; path = ../EDSemver.podspec; sourceTree = "<group>"; };
@@ -95,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C381967C17865C6C00C5FE78 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				C381967917865C0A00C5FE78 /* EDSemverHarness.h */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 		C3903807178615E400ECBCAC = {
 			isa = PBXGroup;
 			children = (
@@ -160,8 +172,11 @@
 		C390383D178615E400ECBCAC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C3903843178615E400ECBCAC /* semverTests.h */,
-				C3903844178615E400ECBCAC /* semverTests.m */,
+				C381967617865BA500C5FE78 /* EDSemverParse.h */,
+				C381967717865BA500C5FE78 /* EDSemverParse.m */,
+				C381967D17865CB600C5FE78 /* EDSemverValid.h */,
+				C381967E17865CB600C5FE78 /* EDSemverValid.m */,
+				C381967C17865C6C00C5FE78 /* Fixtures */,
 				C390383E178615E400ECBCAC /* Supporting Files */,
 			);
 			name = Tests;
@@ -311,9 +326,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3903845178615E400ECBCAC /* semverTests.m in Sources */,
 				C39038511786166E00ECBCAC /* EDSemver.m in Sources */,
 				C390385917861E8800ECBCAC /* NSString+Semver.m in Sources */,
+				C381967817865BA500C5FE78 /* EDSemverParse.m in Sources */,
+				C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

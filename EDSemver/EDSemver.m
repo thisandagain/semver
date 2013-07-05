@@ -8,6 +8,15 @@
 
 #import "EDSemver.h"
 
+@interface EDSemver ()
+@property (readwrite) BOOL isValid;
+@property (readwrite) int major;
+@property (readwrite) int minor;
+@property (readwrite) int patch;
+@property (readwrite, weak) NSString *prerelease;
+@property (readwrite, weak) NSString *build;
+@end
+
 @implementation EDSemver
 
 static NSString const *BUILD_DELIMITER          = @"+";
@@ -15,44 +24,36 @@ static NSString const *PRERELEASE_DELIMITER     = @"-";
 static NSString const *VERSION_DELIMITER        = @".";
 static NSString const *IGNORE_PREFIX            = @"v";
 
-#pragma mark - Public utilities
+#pragma mark - Init
 
-+ (BOOL)isValid:(NSString *)input
+- (id)initWithString:(NSString *)input
 {
-    return YES;
+    self = [super init];
+    if (self) {
+        // Parse
+        NSArray *version = [self parse:input];
+        
+        // Set properites
+        _major = [[version objectAtIndex:0] intValue];
+        _minor = [[version objectAtIndex:1] intValue];
+        _patch = [[version objectAtIndex:2] intValue];
+        _prerelease = [version objectAtIndex:3];
+        _build = [version objectAtIndex:4];
+        
+        // Check
+        _isValid = [self check:input];
+    }
+    return self;
 }
-
-+ (int)major:(NSString *)input
-{
-    return [[[self _split:input] objectAtIndex:0] intValue];
-}
-
-+ (int)minor:(NSString *)input
-{
-    return [[[self _split:input] objectAtIndex:1] intValue];
-}
-
-+ (int)patch:(NSString *)input
-{
-    return [[[self _split:input] objectAtIndex:2] intValue];
-}
-
-+ (NSString *)prerelease:(NSString *)input
-{
-    return [[self _split:input] objectAtIndex:3];
-}
-
-+ (NSString *)build:(NSString *)input
-{
-    return [[self _split:input] objectAtIndex:4];
-}
-
-#pragma mark- Public comparators
-
 
 #pragma mark - Private methods
 
-+ (NSArray *)_split:(NSString *)input
+- (BOOL)check:(NSString *)input
+{
+    return !(_major == 0 && _minor == 0 && _patch == 0);
+}
+
+- (NSArray *)parse:(NSString *)input
 {
     // Storage objects
     NSString *build         = @"";
@@ -74,7 +75,7 @@ static NSString const *IGNORE_PREFIX            = @"v";
     NSArray *p = [input componentsSeparatedByString:(NSString *)PRERELEASE_DELIMITER];
     if ([p count] > 1) {
         input = [p objectAtIndex:0];
-        build = [p lastObject];
+        prerelease = [p lastObject];
     }
 
     // Version

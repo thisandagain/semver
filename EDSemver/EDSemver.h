@@ -10,17 +10,13 @@
 
 @interface EDSemver : NSObject
 
-+ (BOOL)isValid:(NSString *)input;
-+ (int)major:(NSString *)input;
-+ (int)minor:(NSString *)input;
-+ (int)patch:(NSString *)input;
-+ (NSString *)prerelease:(NSString *)input;
-+ (NSString *)build:(NSString *)input;
+@property (readonly) BOOL isValid;
+@property (readonly) int major;
+@property (readonly) int minor;
+@property (readonly) int patch;
+@property (readonly, weak) NSString *prerelease;
+@property (readonly, weak) NSString *build;
 
-+ (BOOL)version:(NSString *)ver isEqualTo:(NSString *)input;
-+ (BOOL)version:(NSString *)ver isGreaterThan:(NSString *)input;
-+ (BOOL)version:(NSString *)ver isGreaterThanOrEqualTo:(NSString *)input;
-+ (BOOL)version:(NSString *)ver isLessThan:(NSString *)input;
-+ (BOOL)version:(NSString *)ver isLessThanOrEqualTo:(NSString *)input;
+- (id)initWithString:(NSString *)input;
 
 @end
