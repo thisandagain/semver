@@ -10,37 +10,82 @@
 
 @implementation EDSemver
 
-static NSString const *IGNORE_V_PREFIX = @"v";
-static NSString const *IGNORE_EQ_PREFIX = @"=";
+static NSString const *BUILD_DELIMITER          = @"+";
+static NSString const *PRERELEASE_DELIMITER     = @"-";
+static NSString const *VERSION_DELIMITER        = @".";
+static NSString const *IGNORE_PREFIX            = @"v";
 
-#pragma mark - Public methods
+#pragma mark - Public utilities
 
-- (BOOL)isValid:(NSString *)ver
++ (BOOL)isValid:(NSString *)input
 {
-    [@"something" isGreaterThan:@""];
-    [EDSemver version:@"something" isGreaterThan:@""];
+    return YES;
 }
 
-- (BOOL)version:(NSString *)ver satisfies:(NSString *)input
++ (int)major:(NSString *)input
 {
-    
+    return [[[self _split:input] objectAtIndex:0] intValue];
 }
 
-- (BOOL)version:(NSString *)ver isGreaterThan:(NSString *)input
++ (int)minor:(NSString *)input
 {
-    
+    return [[[self _split:input] objectAtIndex:1] intValue];
 }
 
-- (BOOL)version:(NSString *)ver isLessThan:(NSString *)input
++ (int)patch:(NSString *)input
 {
-    
+    return [[[self _split:input] objectAtIndex:2] intValue];
 }
+
++ (NSString *)prerelease:(NSString *)input
+{
+    return [[self _split:input] objectAtIndex:3];
+}
+
++ (NSString *)build:(NSString *)input
+{
+    return [[self _split:input] objectAtIndex:4];
+}
+
+#pragma mark- Public comparators
+
 
 #pragma mark - Private methods
 
-- (NSString *)_sanitize:(NSString *)ver
++ (NSArray *)_split:(NSString *)input
 {
+    // Storage objects
+    NSString *build         = @"";
+    NSString *prerelease    = @"";
     
+    // Strip prefix
+    if ([[input substringWithRange:NSMakeRange(0, 1)] isEqualToString:(NSString *)IGNORE_PREFIX]) {
+        input = [input substringFromIndex:1];
+    };
+    
+    // Build
+    NSArray *b = [input componentsSeparatedByString:(NSString *)BUILD_DELIMITER];
+    if ([b count] > 1) {
+        input = [b objectAtIndex:0];
+        build = [b lastObject];
+    }
+
+    // Pre-release
+    NSArray *p = [input componentsSeparatedByString:(NSString *)PRERELEASE_DELIMITER];
+    if ([p count] > 1) {
+        input = [p objectAtIndex:0];
+        build = [p lastObject];
+    }
+
+    // Version
+    NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[input componentsSeparatedByString:(NSString *)VERSION_DELIMITER]];
+    for (int i = [v count]; i < 3; i++) {
+        [v addObject:@"0"];
+    }
+    
+    [v addObject:prerelease];
+    [v addObject:build];
+    return v;
 }
 
 @end
