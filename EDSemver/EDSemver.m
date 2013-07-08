@@ -90,7 +90,6 @@ static NSString const *IGNORE_EQ                = @"=";
     if ([self patch] > [input patch]) return YES;
     if (![[self prerelease] isEqualToString:@""] || ![[input prerelease] isEqualToString:@""]) {
         if ([[self prerelease] isEqualToString:@""] && ![[input prerelease] isEqualToString:@""]) return YES;
-        NSLog(@"%@ | %@ | %d", [self prerelease], [input prerelease], [[self prerelease] compare:[input prerelease]]);
         if ([[self prerelease] compare:[input prerelease]] > 0) return YES;
     }
     
