@@ -73,6 +73,7 @@
 		C3903855178616E500ECBCAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C3A8AB7E178A39A000EE322C /* EDSemverGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverGreaterThan.h; sourceTree = "<group>"; };
 		C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverGreaterThan.m; sourceTree = "<group>"; };
+		C3A8AB81178A542C00EE322C /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		C3D242011786843C0019F61A /* EDSemverLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverLessThan.h; sourceTree = "<group>"; };
 		C3D242021786843C0019F61A /* EDSemverLessThan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverLessThan.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +132,7 @@
 			children = (
 				C3903854178616E500ECBCAC /* LICENSE.md */,
 				C3903855178616E500ECBCAC /* README.md */,
+				C3A8AB81178A542C00EE322C /* .travis.yml */,
 				C3903853178616E500ECBCAC /* EDSemver.podspec */,
 				C39038521786167B00ECBCAC /* EDSemver */,
 				C390383D178615E400ECBCAC /* Tests */,
