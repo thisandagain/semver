@@ -1,4 +1,5 @@
 ## Semver
+`EDSemver` is an implementation of the 2.0.0 spec of [Semantic Versioning](http://semver.org/) for Objective-C.
 
 ### Basic Use
 ```objective-c
@@ -13,7 +14,7 @@ return [left isGreaterThan:right]; // NO
 
 ```objective-c
 EDSemver *version  = [[EDSemver alloc] initWithString:@"v22.0.4-alpha+1234"];
-return [version major];     // 22
+return [version major]; // 22
 ```
 
 ---
