@@ -1,6 +1,8 @@
 ## Semver
 `EDSemver` is an implementation of the 2.0.0 spec of [Semantic Versioning](http://semver.org/) for Objective-C.
 
+[![Build Status](https://travis-ci.org/thisandagain/semver.png?branch=master)](https://travis-ci.org/thisandagain/semver)
+
 ### Basic Use
 ```objective-c
 #import "EDSemver.h"
