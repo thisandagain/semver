@@ -11,6 +11,11 @@ EDSemver *right = [[EDSemver alloc] initWithString:@"1.2.3"];
 return [left isGreaterThan:right]; // NO
 ```
 
+```objective-c
+EDSemver *version  = [[EDSemver alloc] initWithString:@"v22.0.4-alpha+1234"];
+return [version major];     // 22
+```
+
 ---
 
 ### Properties
