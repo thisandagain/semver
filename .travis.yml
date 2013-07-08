@@ -1,2 +1,5 @@
 language: objective-c
-script: ~/travis-utils/osx-cibuild.sh -project Project/semver.xcodeproj/ -sdk iphonesimulator6.1
+before_install:
+    - brew update
+    - brew install xctool --HEAD
+script: make
