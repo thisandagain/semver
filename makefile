@@ -1,4 +1,4 @@
 test:
-	cd Project && xctool -sdk iphonesimulator test
+	cd Project && xctool -project semver.xcodeproj -sdk iphonesimulator test
 
 .PHONY: test
