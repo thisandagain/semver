@@ -40,7 +40,7 @@ return [version major]; // 22
 ---
 
 ### Testing
-The test suite for `EDSemver` is built using OCUnit. To run the test suite, simply open the project in XCode and choose "test" from the Product menu. Please run and augment the tests prior to submitting a pull request.
+The [test suite](https://github.com/thisandagain/semver/tree/master/Project/semverTests) for `EDSemver` is built using OCUnit. To run the test suite, simply open the project in XCode and choose "test" from the Product menu. Please run and augment the tests prior to submitting a pull request.
 
 ### iOS Support
 EDSemver is tested on iOS 5 and up. Older versions of iOS may work but are not currently supported.
