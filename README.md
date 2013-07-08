@@ -1,4 +1,4 @@
-## Semver (Work In Progress)
+## Semver
 
 ### Basic Use
 ```objective-c
@@ -6,37 +6,29 @@
 ```
 
 ```objective-c
-BOOL lt = [EDSemver version:@"v1.1.3" isLessThan:@"v1.4.1-alpha2"];
-return lt;  // YES
+EDSemver *left  = [[EDSemver alloc] initWithString:@"1.2.3-foo"];
+EDSemver *right = [[EDSemver alloc] initWithString:@"1.2.3"];
+return [left isGreaterThan:right]; // NO
 ```
 
 ---
 
-### Versions
-
+### Properties
+```objective-c
+@property (readonly) BOOL isValid;
+@property (readonly) int major;
+@property (readonly) int minor;
+@property (readonly) int patch;
+@property (readonly) NSString *prerelease;
+@property (readonly) NSString *build;
+```
 
 ### Methods
 ```objective-c
-- (BOOL)isValid:(NSString *)ver;
-- (NSString *)sanitize:(NSString *)ver;
-
-- (BOOL)version:(NSString *)ver isEqualTo:(NSString *)input;
-- (BOOL)version:(NSString *)ver isGreaterThan:(NSString *)input;
-- (BOOL)version:(NSString *)ver isGreaterThanOrEqualTo:(NSString *)input;
-- (BOOL)version:(NSString *)ver isLessThan:(NSString *)input;
-- (BOOL)version:(NSString *)ver isLessThanOrEqualTo:(NSString *)input;
-```
-
-### NSString+Semver
-Alternatively, EDSemver can be used as a category of NSString. When used in this way, the interface is slightly more lightweight at the expense of being less explicit:
-
-```objective-c
-#import "NSString+Semver.h"
-```
-
-```objective-c
-BOOL gt = [@"v1.4.8-alpha5" isGreaterThan:@"v4.8"];
-return gt;  // NO
+- (id)initWithString:(NSString *)input;
+- (BOOL)isEqualTo:(EDSemver *)input;
+- (BOOL)isLessThan:(EDSemver *)input;
+- (BOOL)isGreaterThan:(EDSemver *)input;
 ```
 
 ---

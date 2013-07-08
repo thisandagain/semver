@@ -15,6 +15,7 @@
 @property (readwrite) int patch;
 @property (readwrite) NSString *prerelease;
 @property (readwrite) NSString *build;
+@property (readwrite) NSArray *pr;
 
 @property NSString *original;
 @property NSArray *version;
@@ -34,18 +35,23 @@ static NSString const *IGNORE_EQ                = @"=";
 {
     self = [super init];
     if (self) {
-        // Parse
-        _original = input;
-        _version = [self parse:input];
+        // Version of the Semver spec that this library is implementing
+        // http://semver.org/spec/v2.0.0.html
+        _spec       = @"2.0.0";
+        
+        // Lex the input string
+        _original   = input;
+        _version    = [self lex:input];
         
         // Check & set properties
-        _isValid = [self check];
+        _isValid    = [self check];
         if (_isValid) {
-            _major = [[_version objectAtIndex:0] intValue];
-            _minor = [[_version objectAtIndex:1] intValue];
-            _patch = [[_version objectAtIndex:2] intValue];
+            _major      = [[_version objectAtIndex:0] intValue];
+            _minor      = [[_version objectAtIndex:1] intValue];
+            _patch      = [[_version objectAtIndex:2] intValue];
             _prerelease = [_version objectAtIndex:3];
-            _build = [_version objectAtIndex:4];
+            _build      = [_version objectAtIndex:4];
+            _pr         = [self parse:_prerelease strict:NO];
         }
     }
     return self;
@@ -59,17 +65,35 @@ static NSString const *IGNORE_EQ                = @"=";
     if ([self major] != [input major]) return NO;
     if ([self minor] != [input minor]) return NO;
     if ([self patch] != [input patch]) return NO;
+    if ([[self prerelease] compare:[input prerelease]] != 0) return NO;
     
     return YES;
 }
 
 - (BOOL)isLessThan:(EDSemver *)input
 {
+    if ([self major] < [input major]) return YES;
+    if ([self minor] < [input minor]) return YES;
+    if ([self patch] < [input patch]) return YES;
+    if (![[self prerelease] isEqualToString:@""] || ![[input prerelease] isEqualToString:@""]) {
+        if (![[self prerelease] isEqualToString:@""] && [[input prerelease] isEqualToString:@""]) return YES;
+        if ([[self prerelease] compare:[input prerelease]] < 0) return YES;
+    }
+    
     return NO;
 }
 
 - (BOOL)isGreaterThan:(EDSemver *)input
 {
+    if ([self major] > [input major]) return YES;
+    if ([self minor] > [input minor]) return YES;
+    if ([self patch] > [input patch]) return YES;
+    if (![[self prerelease] isEqualToString:@""] || ![[input prerelease] isEqualToString:@""]) {
+        if ([[self prerelease] isEqualToString:@""] && ![[input prerelease] isEqualToString:@""]) return YES;
+        NSLog(@"%@ | %@ | %d", [self prerelease], [input prerelease], [[self prerelease] compare:[input prerelease]]);
+        if ([[self prerelease] compare:[input prerelease]] > 0) return YES;
+    }
+    
     return NO;
 }
 
@@ -90,7 +114,7 @@ static NSString const *IGNORE_EQ                = @"=";
     return YES;
 }
 
-- (NSArray *)parse:(NSString *)input
+- (NSArray *)lex:(NSString *)input
 {
     // Storage objects
     NSString *build         = @"";
@@ -121,14 +145,21 @@ static NSString const *IGNORE_EQ                = @"=";
         prerelease = [p lastObject];
     }
 
-    // Version
+    // Parse remainder and append pre-release & build strings
+    NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[self parse:input strict:YES]];
+    [v addObject:prerelease];
+    [v addObject:build];
+    
+    return v;
+}
+
+- (NSArray *)parse:(NSString *)input strict:(BOOL)strict
+{
     NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[input componentsSeparatedByString:(NSString *)VERSION_DELIMITER]];
     for (int i = [v count]; i < 3; i++) {
         [v addObject:@"0"];
     }
     
-    [v addObject:prerelease];
-    [v addObject:build];
     return v;
 }
 

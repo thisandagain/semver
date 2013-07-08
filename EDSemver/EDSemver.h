@@ -10,6 +10,8 @@
 
 @interface EDSemver : NSObject
 
+@property (readonly) NSString *spec;
+
 @property (readonly) BOOL isValid;
 @property (readonly) int major;
 @property (readonly) int minor;

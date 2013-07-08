@@ -25,6 +25,8 @@
 		C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3903840178615E400ECBCAC /* InfoPlist.strings */; };
 		C39038501786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
 		C39038511786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
+		C3A8AB80178A39A000EE322C /* EDSemverGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */; };
+		C3D242031786843C0019F61A /* EDSemverLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D242021786843C0019F61A /* EDSemverLessThan.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		C3903853178616E500ECBCAC /* EDSemver.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = EDSemver.podspec; path = ../EDSemver.podspec; sourceTree = "<group>"; };
 		C3903854178616E500ECBCAC /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		C3903855178616E500ECBCAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C3A8AB7E178A39A000EE322C /* EDSemverGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverGreaterThan.h; sourceTree = "<group>"; };
+		C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverGreaterThan.m; sourceTree = "<group>"; };
+		C3D242011786843C0019F61A /* EDSemverLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverLessThan.h; sourceTree = "<group>"; };
+		C3D242021786843C0019F61A /* EDSemverLessThan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverLessThan.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,10 @@
 				C38196811786722200C5FE78 /* EDSemverBenchmark.m */,
 				C3819683178676E100C5FE78 /* EDSemverEqualTo.h */,
 				C3819684178676E100C5FE78 /* EDSemverEqualTo.m */,
+				C3A8AB7E178A39A000EE322C /* EDSemverGreaterThan.h */,
+				C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */,
+				C3D242011786843C0019F61A /* EDSemverLessThan.h */,
+				C3D242021786843C0019F61A /* EDSemverLessThan.m */,
 				C381967617865BA500C5FE78 /* EDSemverParse.h */,
 				C381967717865BA500C5FE78 /* EDSemverParse.m */,
 				C381967D17865CB600C5FE78 /* EDSemverValid.h */,
@@ -314,6 +324,8 @@
 				C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */,
 				C38196821786722200C5FE78 /* EDSemverBenchmark.m in Sources */,
 				C3819685178676E100C5FE78 /* EDSemverEqualTo.m in Sources */,
+				C3D242031786843C0019F61A /* EDSemverLessThan.m in Sources */,
+				C3A8AB80178A39A000EE322C /* EDSemverGreaterThan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
