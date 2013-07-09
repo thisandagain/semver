@@ -22,9 +22,9 @@ return [version major]; // 22
 ### Properties
 ```objective-c
 @property (readonly) BOOL isValid;
-@property (readonly) int major;
-@property (readonly) int minor;
-@property (readonly) int patch;
+@property (readonly) NSInteger major;
+@property (readonly) NSInteger minor;
+@property (readonly) NSInteger patch;
 @property (readonly) NSString *prerelease;
 @property (readonly) NSString *build;
 ```
@@ -32,11 +32,11 @@ return [version major]; // 22
 ### Methods
 ```objective-c
 + (instancetype)semverWithString:(NSString *)aString;
-- (instancetype)initWithString:(NSString *)input;
+- (instancetype)initWithString:(NSString *)aString;
 - (NSComparisonResult)compare:(EDSemver *)aVersion;
-- (BOOL)isEqualTo:(EDSemver *)input;
-- (BOOL)isLessThan:(EDSemver *)input;
-- (BOOL)isGreaterThan:(EDSemver *)input;
+- (BOOL)isEqualTo:(EDSemver *)aVersion;
+- (BOOL)isLessThan:(EDSemver *)aVersion;
+- (BOOL)isGreaterThan:(EDSemver *)aVersion;
 ```
 
 ---
