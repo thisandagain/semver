@@ -36,18 +36,18 @@ static NSString const *IGNORE_EQ                = @"=";
 	return [[self alloc] initWithString:aString];
 }
 
-- (id)initWithString:(NSString *)input
+- (instancetype)initWithString:(NSString *)input
 {
     self = [super init];
     if (self) {
         // Version of the Semver spec that this library is implementing
         // http://semver.org/spec/v2.0.0.html
         _spec       = @"2.0.0";
-        
+
         // Lex the input string
         _original   = input;
         _version    = [self lex:input];
-        
+
         // Check & set properties
         _isValid    = [self check];
         if (_isValid) {
@@ -132,7 +132,7 @@ static NSString const *IGNORE_EQ                = @"=";
     for (int i = 0; i < 3; i++) {
         if ([nf numberFromString:[_version objectAtIndex:i]] == nil) return NO;
     }
-    
+
     return YES;
 }
 
@@ -141,7 +141,7 @@ static NSString const *IGNORE_EQ                = @"=";
     // Storage objects
     NSString *build         = @"";
     NSString *prerelease    = @"";
-    
+
     // Strip whitespace & prefix
     if (input.length > 0) {
         input = [input stringByReplacingOccurrencesOfString:@" " withString:@""];
@@ -152,7 +152,7 @@ static NSString const *IGNORE_EQ                = @"=";
             input = [input substringFromIndex:1];
         };
     }
-    
+
     // Build
     NSArray *b = [input componentsSeparatedByString:(NSString *)BUILD_DELIMITER];
     if ([b count] > 1) {
@@ -171,7 +171,7 @@ static NSString const *IGNORE_EQ                = @"=";
     NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[self parse:input strict:YES]];
     [v addObject:prerelease];
     [v addObject:build];
-    
+
     return v;
 }
 
@@ -181,7 +181,7 @@ static NSString const *IGNORE_EQ                = @"=";
     for (int i = [v count]; i < 3; i++) {
         [v addObject:@"0"];
     }
-    
+
     return v;
 }
 
