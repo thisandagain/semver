@@ -31,7 +31,9 @@ return [version major]; // 22
 
 ### Methods
 ```objective-c
-- (id)initWithString:(NSString *)input;
++ (instancetype)semverWithString:(NSString *)aString;
+- (instancetype)initWithString:(NSString *)input;
+- (NSComparisonResult)compare:(EDSemver *)aVersion;
 - (BOOL)isEqualTo:(EDSemver *)input;
 - (BOOL)isLessThan:(EDSemver *)input;
 - (BOOL)isGreaterThan:(EDSemver *)input;
