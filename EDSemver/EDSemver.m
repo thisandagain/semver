@@ -23,39 +23,52 @@
 
 @implementation EDSemver
 
-static NSString const *BUILD_DELIMITER          = @"+";
-static NSString const *PRERELEASE_DELIMITER     = @"-";
-static NSString const *VERSION_DELIMITER        = @".";
-static NSString const *IGNORE_PREFIX            = @"v";
-static NSString const *IGNORE_EQ                = @"=";
+static NSString *const BUILD_DELIMITER          = @"+";
+static NSString *const PRERELEASE_DELIMITER     = @"-";
+static NSString *const VERSION_DELIMITER        = @".";
+static NSString *const IGNORE_PREFIX            = @"v";
+static NSString *const IGNORE_EQ                = @"=";
+
+@synthesize isValid = _isValid;
+@synthesize major = _major;
+@synthesize minor = _minor;
+@synthesize patch = _patch;
+@synthesize prerelease = _prerelease;
+@synthesize build = _build;
+@synthesize original = _original;
+@synthesize version = _version;
+@synthesize pr = _pr;
 
 #pragma mark - Init
+
++ (NSString *)spec
+{
+	// Version of the Semver spec that this library is implementing
+	// http://semver.org/spec/v2.0.0.html
+	return @"2.0.0";
+}
 
 + (instancetype)semverWithString:(NSString *)aString
 {
 	return [[self alloc] initWithString:aString];
 }
 
-- (instancetype)initWithString:(NSString *)input
+- (instancetype)initWithString:(NSString *)aString
 {
     self = [super init];
     if (self) {
-        // Version of the Semver spec that this library is implementing
-        // http://semver.org/spec/v2.0.0.html
-        _spec       = @"2.0.0";
-
         // Lex the input string
-        _original   = input;
-        _version    = [self lex:input];
+        _original   = aString;
+        _version    = [self lex:aString];
 
         // Check & set properties
         _isValid    = [self check];
         if (_isValid) {
-            _major      = [[_version objectAtIndex:0] intValue];
-            _minor      = [[_version objectAtIndex:1] intValue];
-            _patch      = [[_version objectAtIndex:2] intValue];
-            _prerelease = [_version objectAtIndex:3];
-            _build      = [_version objectAtIndex:4];
+            _major      = [_version[0] intValue];
+            _minor      = [_version[1] intValue];
+            _patch      = [_version[2] intValue];
+            _prerelease = _version[3];
+            _build      = _version[4];
             _pr         = [self parse:_prerelease strict:NO];
         }
     }
@@ -70,53 +83,53 @@ static NSString const *IGNORE_EQ                = @"=";
 		[[NSException exceptionWithName:NSInvalidArgumentException reason:@"nil argument" userInfo:nil] raise];
 	}
 
-	NSComparisonResult result = [@([self major]) compare:@([aVersion major])];
+	NSComparisonResult result = [@(self.major) compare:@(aVersion.major)];
 	if (result != NSOrderedSame) {
 		return result;
 	}
 
-	result = [@([self minor]) compare:@([aVersion minor])];
+	result = [@(self.minor) compare:@(aVersion.minor)];
 	if (result != NSOrderedSame) {
 		return result;
 	}
 
-	result = [@([self patch]) compare:@([aVersion patch])];
+	result = [@(self.patch) compare:@(aVersion.patch)];
 	if (result != NSOrderedSame) {
 		return result;
 	}
 
-	if ([[self prerelease] length] > 0 || [[aVersion prerelease] length] > 0) {
-		if ([[self prerelease] length] > 0 && [[aVersion prerelease] length] == 0) return NSOrderedAscending;
-		if ([[self prerelease] length] == 0 && [[aVersion prerelease] length] > 0) return NSOrderedDescending;
-        return [[self prerelease] compare:[aVersion prerelease]];
+	if (self.prerelease.length > 0 || aVersion.prerelease.length > 0) {
+		if (self.prerelease.length > 0 && aVersion.prerelease.length == 0) return NSOrderedAscending;
+		if (self.prerelease.length == 0 && aVersion.prerelease.length > 0) return NSOrderedDescending;
+        return [self.prerelease compare:aVersion.prerelease];
     }
 
 	return NSOrderedSame;
 }
 
-- (BOOL)isEqualTo:(EDSemver *)input
+- (BOOL)isEqualTo:(EDSemver *)aVersion
 {
-    return [self compare:input] == NSOrderedSame;
+    return [self compare:aVersion] == NSOrderedSame;
 }
 
-- (BOOL)isLessThan:(EDSemver *)input
+- (BOOL)isLessThan:(EDSemver *)aVersion
 {
-    return [self compare:input] == NSOrderedAscending;
+    return [self compare:aVersion] == NSOrderedAscending;
 }
 
-- (BOOL)isGreaterThan:(EDSemver *)input
+- (BOOL)isGreaterThan:(EDSemver *)aVersion
 {
-    return [self compare:input] == NSOrderedDescending;
+    return [self compare:aVersion] == NSOrderedDescending;
 }
 
 - (NSString *)description
 {
-	return _original;
+	return self.original;
 }
 
 - (NSString *)debugDescription
 {
-	return [[super debugDescription] stringByReplacingOccurrencesOfString:@">" withString:[NSString stringWithFormat:@" (%@)>", _original]];
+	return [[super debugDescription] stringByReplacingOccurrencesOfString:@">" withString:[NSString stringWithFormat:@" (%@)>", self.original]];
 }
 
 #pragma mark - Private methods
@@ -124,60 +137,59 @@ static NSString const *IGNORE_EQ                = @"=";
 - (BOOL)check
 {
     // Edge cases
-    if (_original == nil) return NO;
-    if ([_original isEqualToString:@""]) return NO;
+    if (self.original.length == 0) return NO;
 
     // Check that major, minor, and patch values are numbers
     NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
     for (int i = 0; i < 3; i++) {
-        if ([nf numberFromString:[_version objectAtIndex:i]] == nil) return NO;
+        if ([nf numberFromString:self.version[i]] == nil) return NO;
     }
 
     return YES;
 }
 
-- (NSArray *)lex:(NSString *)input
+- (NSArray *)lex:(NSString *)aString
 {
     // Storage objects
     NSString *build         = @"";
     NSString *prerelease    = @"";
 
     // Strip whitespace & prefix
-    if (input.length > 0) {
-        input = [input stringByReplacingOccurrencesOfString:@" " withString:@""];
-        if ([[input substringWithRange:NSMakeRange(0, 1)] isEqualToString:(NSString *)IGNORE_PREFIX]) {
-            input = [input substringFromIndex:1];
+    if (aString.length > 0) {
+        aString = [aString stringByReplacingOccurrencesOfString:@" " withString:@""];
+        if ([[aString substringWithRange:NSMakeRange(0, 1)] isEqualToString:IGNORE_PREFIX]) {
+            aString = [aString substringFromIndex:1];
         };
-        if ([[input substringWithRange:NSMakeRange(0, 1)] isEqualToString:(NSString *)IGNORE_EQ]) {
-            input = [input substringFromIndex:1];
+        if ([[aString substringWithRange:NSMakeRange(0, 1)] isEqualToString:IGNORE_EQ]) {
+            aString = [aString substringFromIndex:1];
         };
     }
 
     // Build
-    NSArray *b = [input componentsSeparatedByString:(NSString *)BUILD_DELIMITER];
+    NSArray *b = [aString componentsSeparatedByString:BUILD_DELIMITER];
     if ([b count] > 1) {
-        input = [b objectAtIndex:0];
+        aString = b[0];
         build = [b lastObject];
     }
 
     // Pre-release
-    NSArray *p = [input componentsSeparatedByString:(NSString *)PRERELEASE_DELIMITER];
+    NSArray *p = [aString componentsSeparatedByString:PRERELEASE_DELIMITER];
     if ([p count] > 1) {
-        input = [p objectAtIndex:0];
+        aString = p[0];
         prerelease = [p lastObject];
     }
 
     // Parse remainder and append pre-release & build strings
-    NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[self parse:input strict:YES]];
+    NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[self parse:aString strict:YES]];
     [v addObject:prerelease];
     [v addObject:build];
 
     return v;
 }
 
-- (NSArray *)parse:(NSString *)input strict:(BOOL)strict
+- (NSArray *)parse:(NSString *)aString strict:(BOOL)strict
 {
-    NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[input componentsSeparatedByString:(NSString *)VERSION_DELIMITER]];
+    NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[aString componentsSeparatedByString:VERSION_DELIMITER]];
     for (int i = [v count]; i < 3; i++) {
         [v addObject:@"0"];
     }
