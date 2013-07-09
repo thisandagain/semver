@@ -15,6 +15,9 @@
 
 @implementation EDSemverValid
 
+@synthesize validList = _validList;
+@synthesize invalidList = _invalidList;
+
 - (void)setUp
 {
     [super setUp];
@@ -25,7 +28,7 @@
 
 - (void)testValidTrue
 {
-    for (int i = 0; i < [_validList count]; i++) {
+    for (NSUInteger i = 0; i < [_validList count]; i++) {
         EDSemver *ver = [[EDSemver alloc] initWithString:[_validList objectAtIndex:i]];
         STAssertTrue([ver isValid], VALID_DESC);
     }
@@ -33,7 +36,7 @@
 
 - (void)testValidFalse
 {
-    for (int i = 0; i < [_invalidList count]; i++) {
+    for (NSUInteger i = 0; i < [_invalidList count]; i++) {
         EDSemver *ver = [[EDSemver alloc] initWithString:[_invalidList objectAtIndex:i]];
         STAssertFalse([ver isValid], VALID_DESC);
     }

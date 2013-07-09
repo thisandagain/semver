@@ -14,6 +14,8 @@
 
 @implementation EDSemverBenchmark
 
+@synthesize list = _list;
+
 - (void)setUp
 {
     [super setUp];

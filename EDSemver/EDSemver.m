@@ -141,7 +141,7 @@ static NSString *const IGNORE_EQ                = @"=";
 
     // Check that major, minor, and patch values are numbers
     NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
-    for (int i = 0; i < 3; i++) {
+    for (NSUInteger i = 0; i < 3; i++) {
         if ([nf numberFromString:self.version[i]] == nil) return NO;
     }
 
@@ -190,7 +190,7 @@ static NSString *const IGNORE_EQ                = @"=";
 - (NSArray *)parse:(NSString *)aString strict:(BOOL)strict
 {
     NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[aString componentsSeparatedByString:VERSION_DELIMITER]];
-    for (int i = [v count]; i < 3; i++) {
+    for (NSUInteger i = [v count]; i < 3; i++) {
         [v addObject:@"0"];
     }
 

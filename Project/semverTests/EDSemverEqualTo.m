@@ -52,7 +52,7 @@
         @"  v1.2.3+build", @"1.2.3+otherbuild"
     ];
     
-    for (int i = 0; i < [eq count]; i+=2) {
+    for (NSUInteger i = 0; i < [eq count]; i+=2) {
         EDSemver *left = [[EDSemver alloc] initWithString:[eq objectAtIndex:i]];
         EDSemver *right = [[EDSemver alloc] initWithString:[eq objectAtIndex:i+1]];
         STAssertTrue([left isEqualTo:right], EQUAL_DESC);
@@ -66,7 +66,7 @@
         @"1.2", @"1.2.1"
     ];
     
-    for (int i = 0; i < [eq count]; i+=2) {
+    for (NSUInteger i = 0; i < [eq count]; i+=2) {
         EDSemver *left = [[EDSemver alloc] initWithString:[eq objectAtIndex:i]];
         EDSemver *right = [[EDSemver alloc] initWithString:[eq objectAtIndex:i+1]];
         STAssertFalse([left isEqualTo:right], EQUAL_DESC);

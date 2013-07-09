@@ -39,7 +39,7 @@
         @"3.0.0", @"2.7.2+asdf"
     ];
     
-    for (int i = 0; i < [eq count]; i+=2) {
+    for (NSUInteger i = 0; i < [eq count]; i+=2) {
         EDSemver *left = [[EDSemver alloc] initWithString:[eq objectAtIndex:i]];
         EDSemver *right = [[EDSemver alloc] initWithString:[eq objectAtIndex:i+1]];
 		STAssertEquals([right compare:left], NSOrderedAscending, [NSString stringWithFormat:@"Expected %@ to be less than %@", right, left]);

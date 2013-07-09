@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C336CFF7178BC2F300D35D67 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF4178BC2F300D35D67 /* Base.xcconfig */; };
+		C336CFF8178BC2F300D35D67 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF4178BC2F300D35D67 /* Base.xcconfig */; };
+		C336CFF9178BC2F300D35D67 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF5178BC2F300D35D67 /* Debug.xcconfig */; };
+		C336CFFA178BC2F300D35D67 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF5178BC2F300D35D67 /* Debug.xcconfig */; };
+		C336CFFB178BC2F300D35D67 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF6178BC2F300D35D67 /* Release.xcconfig */; };
+		C336CFFC178BC2F300D35D67 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF6178BC2F300D35D67 /* Release.xcconfig */; };
 		C381967817865BA500C5FE78 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
 		C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
 		C38196821786722200C5FE78 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
@@ -40,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C336CFF4178BC2F300D35D67 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		C336CFF5178BC2F300D35D67 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		C336CFF6178BC2F300D35D67 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		C381967617865BA500C5FE78 /* EDSemverParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverParse.h; sourceTree = "<group>"; };
 		C381967717865BA500C5FE78 /* EDSemverParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverParse.m; sourceTree = "<group>"; };
 		C381967917865C0A00C5FE78 /* EDSemverHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverHarness.h; sourceTree = "<group>"; };
@@ -137,6 +146,9 @@
 				C3819696178679AF00C5FE78 /* Example */,
 				C3903812178615E400ECBCAC /* Frameworks */,
 				C3903811178615E400ECBCAC /* Products */,
+				C336CFF4178BC2F300D35D67 /* Base.xcconfig */,
+				C336CFF5178BC2F300D35D67 /* Debug.xcconfig */,
+				C336CFF6178BC2F300D35D67 /* Release.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,6 +286,9 @@
 			files = (
 				C38196A2178679AF00C5FE78 /* EDViewController.xib in Resources */,
 				C38196A3178679AF00C5FE78 /* InfoPlist.strings in Resources */,
+				C336CFF7178BC2F300D35D67 /* Base.xcconfig in Resources */,
+				C336CFF9178BC2F300D35D67 /* Debug.xcconfig in Resources */,
+				C336CFFB178BC2F300D35D67 /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */,
+				C336CFF8178BC2F300D35D67 /* Base.xcconfig in Resources */,
+				C336CFFA178BC2F300D35D67 /* Debug.xcconfig in Resources */,
+				C336CFFC178BC2F300D35D67 /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +371,7 @@
 /* Begin XCBuildConfiguration section */
 		C3903846178615E400ECBCAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C336CFF5178BC2F300D35D67 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -384,6 +403,7 @@
 		};
 		C3903847178615E400ECBCAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C336CFF6178BC2F300D35D67 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
