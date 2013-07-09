@@ -42,7 +42,7 @@
     for (int i = 0; i < [eq count]; i+=2) {
         EDSemver *left = [[EDSemver alloc] initWithString:[eq objectAtIndex:i]];
         EDSemver *right = [[EDSemver alloc] initWithString:[eq objectAtIndex:i+1]];
-        STAssertTrue([right isLessThan:left], COMP_DESC);
+		STAssertEquals([right compare:left], NSOrderedAscending, [NSString stringWithFormat:@"Expected %@ to be less than %@", right, left]);
     }
 }
 

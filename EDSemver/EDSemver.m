@@ -31,18 +31,23 @@ static NSString const *IGNORE_EQ                = @"=";
 
 #pragma mark - Init
 
-- (id)initWithString:(NSString *)input
++ (instancetype)semverWithString:(NSString *)aString
+{
+	return [[self alloc] initWithString:aString];
+}
+
+- (instancetype)initWithString:(NSString *)input
 {
     self = [super init];
     if (self) {
         // Version of the Semver spec that this library is implementing
         // http://semver.org/spec/v2.0.0.html
         _spec       = @"2.0.0";
-        
+
         // Lex the input string
         _original   = input;
         _version    = [self lex:input];
-        
+
         // Check & set properties
         _isValid    = [self check];
         if (_isValid) {
@@ -59,41 +64,59 @@ static NSString const *IGNORE_EQ                = @"=";
 
 #pragma mark - Public methods
 
+- (NSComparisonResult)compare:(EDSemver *)aVersion
+{
+	if (![self isValid] || ![aVersion isValid]) {
+		[[NSException exceptionWithName:NSInvalidArgumentException reason:@"nil argument" userInfo:nil] raise];
+	}
+
+	NSComparisonResult result = [@([self major]) compare:@([aVersion major])];
+	if (result != NSOrderedSame) {
+		return result;
+	}
+
+	result = [@([self minor]) compare:@([aVersion minor])];
+	if (result != NSOrderedSame) {
+		return result;
+	}
+
+	result = [@([self patch]) compare:@([aVersion patch])];
+	if (result != NSOrderedSame) {
+		return result;
+	}
+
+	if ([[self prerelease] length] > 0 || [[aVersion prerelease] length] > 0) {
+		if ([[self prerelease] length] > 0 && [[aVersion prerelease] length] == 0) return NSOrderedAscending;
+		if ([[self prerelease] length] == 0 && [[aVersion prerelease] length] > 0) return NSOrderedDescending;
+        return [[self prerelease] compare:[aVersion prerelease]];
+    }
+
+	return NSOrderedSame;
+}
+
 - (BOOL)isEqualTo:(EDSemver *)input
 {
-    if (![self isValid] || ![input isValid]) return NO;
-    if ([self major] != [input major]) return NO;
-    if ([self minor] != [input minor]) return NO;
-    if ([self patch] != [input patch]) return NO;
-    if ([[self prerelease] compare:[input prerelease]] != 0) return NO;
-    
-    return YES;
+    return [self compare:input] == NSOrderedSame;
 }
 
 - (BOOL)isLessThan:(EDSemver *)input
 {
-    if ([self major] < [input major]) return YES;
-    if ([self minor] < [input minor]) return YES;
-    if ([self patch] < [input patch]) return YES;
-    if (![[self prerelease] isEqualToString:@""] || ![[input prerelease] isEqualToString:@""]) {
-        if (![[self prerelease] isEqualToString:@""] && [[input prerelease] isEqualToString:@""]) return YES;
-        if ([[self prerelease] compare:[input prerelease]] < 0) return YES;
-    }
-    
-    return NO;
+    return [self compare:input] == NSOrderedAscending;
 }
 
 - (BOOL)isGreaterThan:(EDSemver *)input
 {
-    if ([self major] > [input major]) return YES;
-    if ([self minor] > [input minor]) return YES;
-    if ([self patch] > [input patch]) return YES;
-    if (![[self prerelease] isEqualToString:@""] || ![[input prerelease] isEqualToString:@""]) {
-        if ([[self prerelease] isEqualToString:@""] && ![[input prerelease] isEqualToString:@""]) return YES;
-        if ([[self prerelease] compare:[input prerelease]] > 0) return YES;
-    }
-    
-    return NO;
+    return [self compare:input] == NSOrderedDescending;
+}
+
+- (NSString *)description
+{
+	return _original;
+}
+
+- (NSString *)debugDescription
+{
+	return [[super debugDescription] stringByReplacingOccurrencesOfString:@">" withString:[NSString stringWithFormat:@" (%@)>", _original]];
 }
 
 #pragma mark - Private methods
@@ -109,7 +132,7 @@ static NSString const *IGNORE_EQ                = @"=";
     for (int i = 0; i < 3; i++) {
         if ([nf numberFromString:[_version objectAtIndex:i]] == nil) return NO;
     }
-    
+
     return YES;
 }
 
@@ -118,7 +141,7 @@ static NSString const *IGNORE_EQ                = @"=";
     // Storage objects
     NSString *build         = @"";
     NSString *prerelease    = @"";
-    
+
     // Strip whitespace & prefix
     if (input.length > 0) {
         input = [input stringByReplacingOccurrencesOfString:@" " withString:@""];
@@ -129,7 +152,7 @@ static NSString const *IGNORE_EQ                = @"=";
             input = [input substringFromIndex:1];
         };
     }
-    
+
     // Build
     NSArray *b = [input componentsSeparatedByString:(NSString *)BUILD_DELIMITER];
     if ([b count] > 1) {
@@ -148,7 +171,7 @@ static NSString const *IGNORE_EQ                = @"=";
     NSMutableArray *v = [[NSMutableArray alloc] initWithArray:[self parse:input strict:YES]];
     [v addObject:prerelease];
     [v addObject:build];
-    
+
     return v;
 }
 
@@ -158,7 +181,7 @@ static NSString const *IGNORE_EQ                = @"=";
     for (int i = [v count]; i < 3; i++) {
         [v addObject:@"0"];
     }
-    
+
     return v;
 }
 

@@ -42,7 +42,7 @@
     for (int i = 0; i < [eq count]; i+=2) {
         EDSemver *left = [[EDSemver alloc] initWithString:[eq objectAtIndex:i]];
         EDSemver *right = [[EDSemver alloc] initWithString:[eq objectAtIndex:i+1]];
-        STAssertTrue([left isGreaterThan:right], COMP_DESC);
+        STAssertEquals([left compare:right], NSOrderedDescending, [NSString stringWithFormat:@"Expected %@ to be greater than %@", left, right]);
     }
 }
 
