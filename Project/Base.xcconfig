@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Andrew Sliwinski. All rights reserved.
 //
 
-PRODUCT_NAME = DIY
+PRODUCT_NAME = semver
 WRAPPER_EXTENSION = app
 
 ARCHS[sdk=iphoneos*] = $(ARCHS_UNIVERSAL_IPHONE_OS)
@@ -18,9 +18,6 @@ DEAD_CODE_STRIPPING = YES;
 OTHER_CFLAGS = -fconstant-cfstrings
 DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 
-INFOPLIST_FILE = Resources/DIY-Info.plist
-
-GCC_PREFIX_HEADER = Resources/DIY-Prefix.pch
 GCC_PRECOMPILE_PREFIX_HEADER = YES
 GCC_C_LANGUAGE_STANDARD = c99
 GCC_VERSION = com.apple.compilers.llvm.clang.1_0
