@@ -31,6 +31,11 @@ static NSString const *IGNORE_EQ                = @"=";
 
 #pragma mark - Init
 
++ (instancetype)semverWithString:(NSString *)aString
+{
+	return [[self alloc] initWithString:aString];
+}
+
 - (id)initWithString:(NSString *)input
 {
     self = [super init];

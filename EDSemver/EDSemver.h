@@ -19,7 +19,8 @@
 @property (readonly) NSString *prerelease;
 @property (readonly) NSString *build;
 
-- (id)initWithString:(NSString *)input;
++ (instancetype)semverWithString:(NSString *)aString;
+- (instancetype)initWithString:(NSString *)input;
 - (NSComparisonResult)compare:(EDSemver *)aVersion;
 - (BOOL)isEqualTo:(EDSemver *)input;
 - (BOOL)isLessThan:(EDSemver *)input;
