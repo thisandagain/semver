@@ -19,11 +19,11 @@
 + (NSString *)spec;
 + (instancetype)semverWithString:(NSString *)aString;
 
-- (instancetype)initWithString:(NSString *)input;
+- (instancetype)initWithString:(NSString *)aString;
 - (NSComparisonResult)compare:(EDSemver *)aVersion;
-- (BOOL)isEqualTo:(EDSemver *)input;
-- (BOOL)isLessThan:(EDSemver *)input;
-- (BOOL)isGreaterThan:(EDSemver *)input;
+- (BOOL)isEqualTo:(EDSemver *)aVersion;
+- (BOOL)isLessThan:(EDSemver *)aVersion;
+- (BOOL)isGreaterThan:(EDSemver *)aVersion;
 - (BOOL)isValid;
 
 @end
