@@ -59,41 +59,59 @@ static NSString const *IGNORE_EQ                = @"=";
 
 #pragma mark - Public methods
 
+- (NSComparisonResult)compare:(EDSemver *)aVersion
+{
+	if (![self isValid] || ![aVersion isValid]) {
+		[[NSException exceptionWithName:NSInvalidArgumentException reason:@"nil argument" userInfo:nil] raise];
+	}
+
+	NSComparisonResult result = [@([self major]) compare:@([aVersion major])];
+	if (result != NSOrderedSame) {
+		return result;
+	}
+
+	result = [@([self minor]) compare:@([aVersion minor])];
+	if (result != NSOrderedSame) {
+		return result;
+	}
+
+	result = [@([self patch]) compare:@([aVersion patch])];
+	if (result != NSOrderedSame) {
+		return result;
+	}
+
+	if ([[self prerelease] length] > 0 || [[aVersion prerelease] length] > 0) {
+		if ([[self prerelease] length] > 0 && [[aVersion prerelease] length] == 0) return NSOrderedAscending;
+		if ([[self prerelease] length] == 0 && [[aVersion prerelease] length] > 0) return NSOrderedDescending;
+        return [[self prerelease] compare:[aVersion prerelease]];
+    }
+
+	return NSOrderedSame;
+}
+
 - (BOOL)isEqualTo:(EDSemver *)input
 {
-    if (![self isValid] || ![input isValid]) return NO;
-    if ([self major] != [input major]) return NO;
-    if ([self minor] != [input minor]) return NO;
-    if ([self patch] != [input patch]) return NO;
-    if ([[self prerelease] compare:[input prerelease]] != 0) return NO;
-    
-    return YES;
+    return [self compare:input] == NSOrderedSame;
 }
 
 - (BOOL)isLessThan:(EDSemver *)input
 {
-    if ([self major] < [input major]) return YES;
-    if ([self minor] < [input minor]) return YES;
-    if ([self patch] < [input patch]) return YES;
-    if (![[self prerelease] isEqualToString:@""] || ![[input prerelease] isEqualToString:@""]) {
-        if (![[self prerelease] isEqualToString:@""] && [[input prerelease] isEqualToString:@""]) return YES;
-        if ([[self prerelease] compare:[input prerelease]] < 0) return YES;
-    }
-    
-    return NO;
+    return [self compare:input] == NSOrderedAscending;
 }
 
 - (BOOL)isGreaterThan:(EDSemver *)input
 {
-    if ([self major] > [input major]) return YES;
-    if ([self minor] > [input minor]) return YES;
-    if ([self patch] > [input patch]) return YES;
-    if (![[self prerelease] isEqualToString:@""] || ![[input prerelease] isEqualToString:@""]) {
-        if ([[self prerelease] isEqualToString:@""] && ![[input prerelease] isEqualToString:@""]) return YES;
-        if ([[self prerelease] compare:[input prerelease]] > 0) return YES;
-    }
-    
-    return NO;
+    return [self compare:input] == NSOrderedDescending;
+}
+
+- (NSString *)description
+{
+	return _original;
+}
+
+- (NSString *)debugDescription
+{
+	return [[super debugDescription] stringByReplacingOccurrencesOfString:@">" withString:[NSString stringWithFormat:@" (%@)>", _original]];
 }
 
 #pragma mark - Private methods
