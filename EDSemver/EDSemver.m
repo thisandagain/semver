@@ -29,7 +29,24 @@ static NSString const *VERSION_DELIMITER        = @".";
 static NSString const *IGNORE_PREFIX            = @"v";
 static NSString const *IGNORE_EQ                = @"=";
 
+@synthesize isValid = _isValid;
+@synthesize major = _major;
+@synthesize minor = _minor;
+@synthesize patch = _patch;
+@synthesize prerelease = _prerelease;
+@synthesize build = _build;
+@synthesize original = _original;
+@synthesize version = _version;
+@synthesize pr = _pr;
+
 #pragma mark - Init
+
++ (NSString *)spec
+{
+	// Version of the Semver spec that this library is implementing
+	// http://semver.org/spec/v2.0.0.html
+	return @"2.0.0";
+}
 
 + (instancetype)semverWithString:(NSString *)aString
 {
@@ -40,10 +57,6 @@ static NSString const *IGNORE_EQ                = @"=";
 {
     self = [super init];
     if (self) {
-        // Version of the Semver spec that this library is implementing
-        // http://semver.org/spec/v2.0.0.html
-        _spec       = @"2.0.0";
-
         // Lex the input string
         _original   = input;
         _version    = [self lex:input];
@@ -111,12 +124,12 @@ static NSString const *IGNORE_EQ                = @"=";
 
 - (NSString *)description
 {
-	return _original;
+	return self.original;
 }
 
 - (NSString *)debugDescription
 {
-	return [[super debugDescription] stringByReplacingOccurrencesOfString:@">" withString:[NSString stringWithFormat:@" (%@)>", _original]];
+	return [[super debugDescription] stringByReplacingOccurrencesOfString:@">" withString:[NSString stringWithFormat:@" (%@)>", self.original]];
 }
 
 #pragma mark - Private methods
@@ -124,13 +137,12 @@ static NSString const *IGNORE_EQ                = @"=";
 - (BOOL)check
 {
     // Edge cases
-    if (_original == nil) return NO;
-    if ([_original isEqualToString:@""]) return NO;
+    if (self.original.length == 0) return NO;
 
     // Check that major, minor, and patch values are numbers
     NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
     for (int i = 0; i < 3; i++) {
-        if ([nf numberFromString:[_version objectAtIndex:i]] == nil) return NO;
+        if ([nf numberFromString:[self.version objectAtIndex:i]] == nil) return NO;
     }
 
     return YES;
