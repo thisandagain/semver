@@ -7,43 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C336CFF7178BC2F300D35D67 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF4178BC2F300D35D67 /* Base.xcconfig */; };
 		C336CFF8178BC2F300D35D67 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF4178BC2F300D35D67 /* Base.xcconfig */; };
-		C336CFF9178BC2F300D35D67 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF5178BC2F300D35D67 /* Debug.xcconfig */; };
 		C336CFFA178BC2F300D35D67 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF5178BC2F300D35D67 /* Debug.xcconfig */; };
-		C336CFFB178BC2F300D35D67 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF6178BC2F300D35D67 /* Release.xcconfig */; };
 		C336CFFC178BC2F300D35D67 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF6178BC2F300D35D67 /* Release.xcconfig */; };
 		C381967817865BA500C5FE78 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
 		C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
 		C38196821786722200C5FE78 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
 		C3819685178676E100C5FE78 /* EDSemverEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3819684178676E100C5FE78 /* EDSemverEqualTo.m */; };
-		C38196A0178679AF00C5FE78 /* EDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3819698178679AF00C5FE78 /* EDAppDelegate.m */; };
-		C38196A1178679AF00C5FE78 /* EDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C381969A178679AF00C5FE78 /* EDViewController.m */; };
-		C38196A2178679AF00C5FE78 /* EDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C381969B178679AF00C5FE78 /* EDViewController.xib */; };
-		C38196A3178679AF00C5FE78 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C381969C178679AF00C5FE78 /* InfoPlist.strings */; };
-		C38196A4178679AF00C5FE78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C381969D178679AF00C5FE78 /* main.m */; };
-		C3903814178615E400ECBCAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903813178615E400ECBCAC /* UIKit.framework */; };
-		C3903816178615E400ECBCAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903815178615E400ECBCAC /* Foundation.framework */; };
-		C3903818178615E400ECBCAC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903817178615E400ECBCAC /* CoreGraphics.framework */; };
 		C3903838178615E400ECBCAC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903837178615E400ECBCAC /* SenTestingKit.framework */; };
 		C3903839178615E400ECBCAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903813178615E400ECBCAC /* UIKit.framework */; };
 		C390383A178615E400ECBCAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903815178615E400ECBCAC /* Foundation.framework */; };
 		C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3903840178615E400ECBCAC /* InfoPlist.strings */; };
-		C39038501786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
 		C39038511786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
 		C3A8AB80178A39A000EE322C /* EDSemverGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */; };
 		C3D242031786843C0019F61A /* EDSemverLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D242021786843C0019F61A /* EDSemverLessThan.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C390383B178615E400ECBCAC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3903808178615E400ECBCAC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C390380F178615E400ECBCAC;
-			remoteInfo = semver;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C336CFF4178BC2F300D35D67 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
@@ -58,16 +36,8 @@
 		C38196811786722200C5FE78 /* EDSemverBenchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverBenchmark.m; sourceTree = "<group>"; };
 		C3819683178676E100C5FE78 /* EDSemverEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverEqualTo.h; sourceTree = "<group>"; };
 		C3819684178676E100C5FE78 /* EDSemverEqualTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverEqualTo.m; sourceTree = "<group>"; };
-		C3819697178679AF00C5FE78 /* EDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDAppDelegate.h; sourceTree = "<group>"; };
-		C3819698178679AF00C5FE78 /* EDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDAppDelegate.m; sourceTree = "<group>"; };
-		C3819699178679AF00C5FE78 /* EDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDViewController.h; sourceTree = "<group>"; };
-		C381969A178679AF00C5FE78 /* EDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDViewController.m; sourceTree = "<group>"; };
-		C381969B178679AF00C5FE78 /* EDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDViewController.xib; sourceTree = "<group>"; };
 		C381969C178679AF00C5FE78 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		C381969D178679AF00C5FE78 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C381969E178679AF00C5FE78 /* semver-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "semver-Info.plist"; sourceTree = "<group>"; };
-		C381969F178679AF00C5FE78 /* semver-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "semver-Prefix.pch"; sourceTree = "<group>"; };
-		C3903810178615E400ECBCAC /* semver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = semver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3903813178615E400ECBCAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3903815178615E400ECBCAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3903817178615E400ECBCAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,16 +57,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C390380D178615E400ECBCAC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C3903814178615E400ECBCAC /* UIKit.framework in Frameworks */,
-				C3903816178615E400ECBCAC /* Foundation.framework in Frameworks */,
-				C3903818178615E400ECBCAC /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3903832178615E400ECBCAC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,20 +78,13 @@
 			name = Fixtures;
 			sourceTree = "<group>";
 		};
-		C3819696178679AF00C5FE78 /* Example */ = {
+		C3819696178679AF00C5FE78 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C3819697178679AF00C5FE78 /* EDAppDelegate.h */,
-				C3819698178679AF00C5FE78 /* EDAppDelegate.m */,
-				C3819699178679AF00C5FE78 /* EDViewController.h */,
-				C381969A178679AF00C5FE78 /* EDViewController.m */,
-				C381969B178679AF00C5FE78 /* EDViewController.xib */,
 				C381969C178679AF00C5FE78 /* InfoPlist.strings */,
-				C381969D178679AF00C5FE78 /* main.m */,
 				C381969E178679AF00C5FE78 /* semver-Info.plist */,
-				C381969F178679AF00C5FE78 /* semver-Prefix.pch */,
 			);
-			name = Example;
+			name = Resources;
 			path = semver;
 			sourceTree = "<group>";
 		};
@@ -143,7 +96,7 @@
 				C3903853178616E500ECBCAC /* EDSemver.podspec */,
 				C39038521786167B00ECBCAC /* EDSemver */,
 				C390383D178615E400ECBCAC /* Tests */,
-				C3819696178679AF00C5FE78 /* Example */,
+				C3819696178679AF00C5FE78 /* Resources */,
 				C3903812178615E400ECBCAC /* Frameworks */,
 				C3903811178615E400ECBCAC /* Products */,
 				C336CFF4178BC2F300D35D67 /* Base.xcconfig */,
@@ -155,7 +108,6 @@
 		C3903811178615E400ECBCAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3903810178615E400ECBCAC /* semver.app */,
 				C3903836178615E400ECBCAC /* semverTests.octest */,
 			);
 			name = Products;
@@ -215,23 +167,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C390380F178615E400ECBCAC /* semver */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C3903848178615E400ECBCAC /* Build configuration list for PBXNativeTarget "semver" */;
-			buildPhases = (
-				C390380C178615E400ECBCAC /* Sources */,
-				C390380D178615E400ECBCAC /* Frameworks */,
-				C390380E178615E400ECBCAC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = semver;
-			productName = semver;
-			productReference = C3903810178615E400ECBCAC /* semver.app */;
-			productType = "com.apple.product-type.application";
-		};
 		C3903835178615E400ECBCAC /* semverTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C390384B178615E400ECBCAC /* Build configuration list for PBXNativeTarget "semverTests" */;
@@ -244,7 +179,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C390383C178615E400ECBCAC /* PBXTargetDependency */,
 			);
 			name = semverTests;
 			productName = semverTests;
@@ -273,25 +207,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C390380F178615E400ECBCAC /* semver */,
 				C3903835178615E400ECBCAC /* semverTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C390380E178615E400ECBCAC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C38196A2178679AF00C5FE78 /* EDViewController.xib in Resources */,
-				C38196A3178679AF00C5FE78 /* InfoPlist.strings in Resources */,
-				C336CFF7178BC2F300D35D67 /* Base.xcconfig in Resources */,
-				C336CFF9178BC2F300D35D67 /* Debug.xcconfig in Resources */,
-				C336CFFB178BC2F300D35D67 /* Release.xcconfig in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3903833178615E400ECBCAC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,17 +243,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C390380C178615E400ECBCAC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C39038501786166E00ECBCAC /* EDSemver.m in Sources */,
-				C38196A0178679AF00C5FE78 /* EDAppDelegate.m in Sources */,
-				C38196A1178679AF00C5FE78 /* EDViewController.m in Sources */,
-				C38196A4178679AF00C5FE78 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3903831178615E400ECBCAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,14 +258,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C390383C178615E400ECBCAC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C390380F178615E400ECBCAC /* semver */;
-			targetProxy = C390383B178615E400ECBCAC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C3903840178615E400ECBCAC /* InfoPlist.strings */ = {
@@ -427,28 +329,6 @@
 			};
 			name = Release;
 		};
-		C3903849178615E400ECBCAC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "semver/semver-Prefix.pch";
-				INFOPLIST_FILE = "semver/semver-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		C390384A178615E400ECBCAC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "semver/semver-Prefix.pch";
-				INFOPLIST_FILE = "semver/semver-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		C390384C178615E400ECBCAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -491,15 +371,6 @@
 			buildConfigurations = (
 				C3903846178615E400ECBCAC /* Debug */,
 				C3903847178615E400ECBCAC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C3903848178615E400ECBCAC /* Build configuration list for PBXNativeTarget "semver" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C3903849178615E400ECBCAC /* Debug */,
-				C390384A178615E400ECBCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
