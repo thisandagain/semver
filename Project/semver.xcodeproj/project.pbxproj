@@ -24,14 +24,10 @@
 		C336CFF4178BC2F300D35D67 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		C336CFF5178BC2F300D35D67 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C336CFF6178BC2F300D35D67 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		C381967617865BA500C5FE78 /* EDSemverParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverParse.h; sourceTree = "<group>"; };
 		C381967717865BA500C5FE78 /* EDSemverParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverParse.m; sourceTree = "<group>"; };
 		C381967917865C0A00C5FE78 /* EDSemverHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverHarness.h; sourceTree = "<group>"; };
-		C381967D17865CB600C5FE78 /* EDSemverValid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverValid.h; sourceTree = "<group>"; };
 		C381967E17865CB600C5FE78 /* EDSemverValid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverValid.m; sourceTree = "<group>"; };
-		C38196801786722200C5FE78 /* EDSemverBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverBenchmark.h; sourceTree = "<group>"; };
 		C38196811786722200C5FE78 /* EDSemverBenchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverBenchmark.m; sourceTree = "<group>"; };
-		C3819683178676E100C5FE78 /* EDSemverEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverEqualTo.h; sourceTree = "<group>"; };
 		C3819684178676E100C5FE78 /* EDSemverEqualTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverEqualTo.m; sourceTree = "<group>"; };
 		C381969C178679AF00C5FE78 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		C381969E178679AF00C5FE78 /* semver-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "semver-Info.plist"; sourceTree = "<group>"; };
@@ -47,9 +43,7 @@
 		C3903853178616E500ECBCAC /* EDSemver.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = EDSemver.podspec; path = ../EDSemver.podspec; sourceTree = "<group>"; };
 		C3903854178616E500ECBCAC /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		C3903855178616E500ECBCAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C3A8AB7E178A39A000EE322C /* EDSemverGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverGreaterThan.h; sourceTree = "<group>"; };
 		C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverGreaterThan.m; sourceTree = "<group>"; };
-		C3D242011786843C0019F61A /* EDSemverLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverLessThan.h; sourceTree = "<group>"; };
 		C3D242021786843C0019F61A /* EDSemverLessThan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverLessThan.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,17 +118,11 @@
 		C390383D178615E400ECBCAC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C38196801786722200C5FE78 /* EDSemverBenchmark.h */,
 				C38196811786722200C5FE78 /* EDSemverBenchmark.m */,
-				C3819683178676E100C5FE78 /* EDSemverEqualTo.h */,
 				C3819684178676E100C5FE78 /* EDSemverEqualTo.m */,
-				C3A8AB7E178A39A000EE322C /* EDSemverGreaterThan.h */,
 				C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */,
-				C3D242011786843C0019F61A /* EDSemverLessThan.h */,
 				C3D242021786843C0019F61A /* EDSemverLessThan.m */,
-				C381967617865BA500C5FE78 /* EDSemverParse.h */,
 				C381967717865BA500C5FE78 /* EDSemverParse.m */,
-				C381967D17865CB600C5FE78 /* EDSemverValid.h */,
 				C381967E17865CB600C5FE78 /* EDSemverValid.m */,
 				C381967C17865C6C00C5FE78 /* Fixtures */,
 				C390383E178615E400ECBCAC /* Supporting Files */,
