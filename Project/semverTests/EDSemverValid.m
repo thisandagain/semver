@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 Andrew Sliwinski. All rights reserved.
 //
 
-#import "EDSemverValid.h"
+#import "EDSemverHarness.h"
+
+@interface EDSemverValid : SenTestCase
+@end
 
 @interface EDSemverValid ()
 @property NSArray *validList;

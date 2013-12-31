@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 Andrew Sliwinski. All rights reserved.
 //
 
-#import "EDSemverParse.h"
+#import "EDSemverHarness.h"
+
+@interface EDSemverParse : SenTestCase
+@end
 
 @implementation EDSemverParse
 

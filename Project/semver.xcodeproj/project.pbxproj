@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C336CFF8178BC2F300D35D67 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF4178BC2F300D35D67 /* Base.xcconfig */; };
-		C336CFFA178BC2F300D35D67 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF5178BC2F300D35D67 /* Debug.xcconfig */; };
-		C336CFFC178BC2F300D35D67 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF6178BC2F300D35D67 /* Release.xcconfig */; };
 		C381967817865BA500C5FE78 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
 		C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
 		C38196821786722200C5FE78 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
@@ -27,14 +24,10 @@
 		C336CFF4178BC2F300D35D67 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		C336CFF5178BC2F300D35D67 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C336CFF6178BC2F300D35D67 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		C381967617865BA500C5FE78 /* EDSemverParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverParse.h; sourceTree = "<group>"; };
 		C381967717865BA500C5FE78 /* EDSemverParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverParse.m; sourceTree = "<group>"; };
 		C381967917865C0A00C5FE78 /* EDSemverHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverHarness.h; sourceTree = "<group>"; };
-		C381967D17865CB600C5FE78 /* EDSemverValid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverValid.h; sourceTree = "<group>"; };
 		C381967E17865CB600C5FE78 /* EDSemverValid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverValid.m; sourceTree = "<group>"; };
-		C38196801786722200C5FE78 /* EDSemverBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverBenchmark.h; sourceTree = "<group>"; };
 		C38196811786722200C5FE78 /* EDSemverBenchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverBenchmark.m; sourceTree = "<group>"; };
-		C3819683178676E100C5FE78 /* EDSemverEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverEqualTo.h; sourceTree = "<group>"; };
 		C3819684178676E100C5FE78 /* EDSemverEqualTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverEqualTo.m; sourceTree = "<group>"; };
 		C381969C178679AF00C5FE78 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		C381969E178679AF00C5FE78 /* semver-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "semver-Info.plist"; sourceTree = "<group>"; };
@@ -50,9 +43,7 @@
 		C3903853178616E500ECBCAC /* EDSemver.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = EDSemver.podspec; path = ../EDSemver.podspec; sourceTree = "<group>"; };
 		C3903854178616E500ECBCAC /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		C3903855178616E500ECBCAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C3A8AB7E178A39A000EE322C /* EDSemverGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverGreaterThan.h; sourceTree = "<group>"; };
 		C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverGreaterThan.m; sourceTree = "<group>"; };
-		C3D242011786843C0019F61A /* EDSemverLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverLessThan.h; sourceTree = "<group>"; };
 		C3D242021786843C0019F61A /* EDSemverLessThan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverLessThan.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,17 +118,11 @@
 		C390383D178615E400ECBCAC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C38196801786722200C5FE78 /* EDSemverBenchmark.h */,
 				C38196811786722200C5FE78 /* EDSemverBenchmark.m */,
-				C3819683178676E100C5FE78 /* EDSemverEqualTo.h */,
 				C3819684178676E100C5FE78 /* EDSemverEqualTo.m */,
-				C3A8AB7E178A39A000EE322C /* EDSemverGreaterThan.h */,
 				C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */,
-				C3D242011786843C0019F61A /* EDSemverLessThan.h */,
 				C3D242021786843C0019F61A /* EDSemverLessThan.m */,
-				C381967617865BA500C5FE78 /* EDSemverParse.h */,
 				C381967717865BA500C5FE78 /* EDSemverParse.m */,
-				C381967D17865CB600C5FE78 /* EDSemverValid.h */,
 				C381967E17865CB600C5FE78 /* EDSemverValid.m */,
 				C381967C17865C6C00C5FE78 /* Fixtures */,
 				C390383E178615E400ECBCAC /* Supporting Files */,
@@ -192,7 +177,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ED;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Andrew Sliwinski";
 			};
 			buildConfigurationList = C390380B178615E400ECBCAC /* Build configuration list for PBXProject "semver" */;
@@ -218,9 +203,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */,
-				C336CFF8178BC2F300D35D67 /* Base.xcconfig in Resources */,
-				C336CFFA178BC2F300D35D67 /* Debug.xcconfig in Resources */,
-				C336CFFC178BC2F300D35D67 /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +277,9 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
@@ -320,7 +304,9 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -332,7 +318,6 @@
 		C390384C178615E400ECBCAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/semver.app/semver";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -341,7 +326,6 @@
 				GCC_PREFIX_HEADER = "semver/semver-Prefix.pch";
 				INFOPLIST_FILE = "semverTests/semverTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -349,7 +333,6 @@
 		C390384D178615E400ECBCAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/semver.app/semver";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -358,7 +341,6 @@
 				GCC_PREFIX_HEADER = "semver/semver-Prefix.pch";
 				INFOPLIST_FILE = "semverTests/semverTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 Andrew Sliwinski. All rights reserved.
 //
 
-#import "EDSemverBenchmark.h"
+#import "EDSemverHarness.h"
+
+@interface EDSemverBenchmark : SenTestCase
+@end
 
 @interface EDSemverBenchmark ()
 @property NSArray *list;

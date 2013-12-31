@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 Andrew Sliwinski. All rights reserved.
 //
 
-#import "EDSemverEqualTo.h"
+#import "EDSemverHarness.h"
+
+@interface EDSemverEqualTo : SenTestCase
+@end
 
 @implementation EDSemverEqualTo
 
