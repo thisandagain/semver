@@ -22,13 +22,13 @@
 - (void)setUp
 {
     [super setUp];
-    
+
     _list = @[@"1.2.3", @"v1.2.3", @"1.2.3-foo", @"1.0.0-alpha", @"1.0-alpha", @"1-alpha", @"   1.2.3", @"1.2.3 ", @"v1.0.0-alpha", @"v1.2-alpha+123"];
 }
 
 - (void)testBenchmark
 {
-    for (int i = 0; i < 1000; i++) {
+    for (NSUInteger i = 0; i < 1000; i++) {
         EDSemver *ver = [[EDSemver alloc] initWithString:[_list objectAtIndex:i % 10]];
         STAssertTrue([ver isValid], VALID_DESC);
     }
