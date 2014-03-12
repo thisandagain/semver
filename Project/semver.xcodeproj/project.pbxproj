@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C336CFF7178BC2F300D35D67 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF4178BC2F300D35D67 /* Base.xcconfig */; };
-		C336CFF8178BC2F300D35D67 /* Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF4178BC2F300D35D67 /* Base.xcconfig */; };
-		C336CFF9178BC2F300D35D67 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF5178BC2F300D35D67 /* Debug.xcconfig */; };
-		C336CFFA178BC2F300D35D67 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF5178BC2F300D35D67 /* Debug.xcconfig */; };
-		C336CFFB178BC2F300D35D67 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF6178BC2F300D35D67 /* Release.xcconfig */; };
-		C336CFFC178BC2F300D35D67 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C336CFF6178BC2F300D35D67 /* Release.xcconfig */; };
+		C373DFB218D0DDAB0019A2F8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C373DFB118D0DDAB0019A2F8 /* Default-568h@2x.png */; };
 		C381967817865BA500C5FE78 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
 		C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
 		C38196821786722200C5FE78 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
@@ -49,6 +44,7 @@
 		C336CFF4178BC2F300D35D67 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		C336CFF5178BC2F300D35D67 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C336CFF6178BC2F300D35D67 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		C373DFB118D0DDAB0019A2F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		C381967617865BA500C5FE78 /* EDSemverParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverParse.h; sourceTree = "<group>"; };
 		C381967717865BA500C5FE78 /* EDSemverParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverParse.m; sourceTree = "<group>"; };
 		C381967917865C0A00C5FE78 /* EDSemverHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverHarness.h; sourceTree = "<group>"; };
@@ -130,6 +126,7 @@
 				C381969D178679AF00C5FE78 /* main.m */,
 				C381969E178679AF00C5FE78 /* semver-Info.plist */,
 				C381969F178679AF00C5FE78 /* semver-Prefix.pch */,
+				C373DFB118D0DDAB0019A2F8 /* Default-568h@2x.png */,
 			);
 			name = Example;
 			path = semver;
@@ -258,7 +255,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ED;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Andrew Sliwinski";
 			};
 			buildConfigurationList = C390380B178615E400ECBCAC /* Build configuration list for PBXProject "semver" */;
@@ -286,9 +283,7 @@
 			files = (
 				C38196A2178679AF00C5FE78 /* EDViewController.xib in Resources */,
 				C38196A3178679AF00C5FE78 /* InfoPlist.strings in Resources */,
-				C336CFF7178BC2F300D35D67 /* Base.xcconfig in Resources */,
-				C336CFF9178BC2F300D35D67 /* Debug.xcconfig in Resources */,
-				C336CFFB178BC2F300D35D67 /* Release.xcconfig in Resources */,
+				C373DFB218D0DDAB0019A2F8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */,
-				C336CFF8178BC2F300D35D67 /* Base.xcconfig in Resources */,
-				C336CFFA178BC2F300D35D67 /* Debug.xcconfig in Resources */,
-				C336CFFC178BC2F300D35D67 /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +385,9 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +412,9 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
