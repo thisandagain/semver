@@ -20,20 +20,6 @@
                ReferencedContainer = "container:semver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3903835178615E400ECBCAC"
-               BuildableName = "semverTests.octest"
-               BlueprintName = "semverTests"
-               ReferencedContainer = "container:semver.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -10,9 +10,9 @@
 
 @interface EDSemver ()
 @property (readwrite) BOOL isValid;
-@property (readwrite) int major;
-@property (readwrite) int minor;
-@property (readwrite) int patch;
+@property (readwrite) NSInteger major;
+@property (readwrite) NSInteger minor;
+@property (readwrite) NSInteger patch;
 @property (readwrite) NSString *prerelease;
 @property (readwrite) NSString *build;
 @property (readwrite) NSArray *pr;
@@ -64,9 +64,9 @@ static NSString *const IGNORE_EQ                = @"=";
         // Check & set properties
         _isValid    = [self check];
         if (_isValid) {
-            _major      = [_version[0] intValue];
-            _minor      = [_version[1] intValue];
-            _patch      = [_version[2] intValue];
+            _major      = [_version[0] integerValue];
+            _minor      = [_version[1] integerValue];
+            _patch      = [_version[2] integerValue];
             _prerelease = _version[3];
             _build      = _version[4];
             _pr         = [self parse:_prerelease strict:NO];

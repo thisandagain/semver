@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 Andrew Sliwinski. All rights reserved.
 //
 
-#import "EDSemverLessThan.h"
+#import "EDSemverHarness.h"
+
+@interface EDSemverLessThan : SenTestCase
+@end
 
 @implementation EDSemverLessThan
 
