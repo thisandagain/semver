@@ -17,7 +17,6 @@
 @property (readwrite) NSString *build;
 @property (readwrite) NSArray *pr;
 
-@property NSString *original;
 @property NSArray *version;
 @end
 

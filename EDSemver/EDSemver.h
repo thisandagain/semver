@@ -10,6 +10,7 @@
 
 @interface EDSemver : NSObject
 
+@property (readonly) NSString *original;
 @property (readonly) NSInteger major;
 @property (readonly) NSInteger minor;
 @property (readonly) NSInteger patch;
