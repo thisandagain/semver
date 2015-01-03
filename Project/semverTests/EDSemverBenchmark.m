@@ -8,7 +8,7 @@
 
 #import "EDSemverHarness.h"
 
-@interface EDSemverBenchmark : SenTestCase
+@interface EDSemverBenchmark : XCTestCase
 @end
 
 @interface EDSemverBenchmark ()
@@ -30,7 +30,7 @@
 {
     for (NSUInteger i = 0; i < 1000; i++) {
         EDSemver *ver = [[EDSemver alloc] initWithString:[_list objectAtIndex:i % 10]];
-        STAssertTrue([ver isValid], VALID_DESC);
+        XCTAssertTrue([ver isValid], VALID_DESC);
     }
 }
 
