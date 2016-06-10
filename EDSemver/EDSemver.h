@@ -64,6 +64,34 @@
  */
 - (NSComparisonResult)compare:(nonnull EDSemver *)aVersion;
 /*!
+ *  Is version equal to another version
+ *  Implemented using `compare:`. Returns NO parameter is nil
+ *
+ *  @param object Another version
+ *
+ *  @return YES if equal, NO otherwise
+ */
+- (BOOL)isEqualTo:(nullable id)object;
+/*!
+ *  Is version less than another version.
+ *  Implemented using `compare:`. Returns NO parameter is nil
+ *
+ *  @param object Another version
+ *
+ *  @return YES if less than, NO otherwise
+ */
+- (BOOL)isLessThan:(nullable id)object;
+/*!
+ *  Is version greater than than another version.
+ *  Implemented using `compare:`. Returns NO parameter is nil
+ *
+ *  @param object Another version
+ *
+ *  @return YES if greater than, NO otherwise
+ */
+- (BOOL)isGreaterThan:(nullable id)object;
+
+/*!
  *  Is the semver object valid?
  *
  *  @return YES if valid, NO otherwise
