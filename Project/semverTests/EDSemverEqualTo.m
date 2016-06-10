@@ -8,7 +8,7 @@
 
 #import "EDSemverHarness.h"
 
-@interface EDSemverEqualTo : SenTestCase
+@interface EDSemverEqualTo : XCTestCase
 @end
 
 @implementation EDSemverEqualTo
@@ -58,7 +58,7 @@
     for (NSUInteger i = 0; i < [eq count]; i+=2) {
         EDSemver *left = [[EDSemver alloc] initWithString:[eq objectAtIndex:i]];
         EDSemver *right = [[EDSemver alloc] initWithString:[eq objectAtIndex:i+1]];
-        STAssertTrue([left isEqualTo:right], EQUAL_DESC);
+        XCTAssertTrue([left isEqualTo:right], EQUAL_DESC);
     }
 }
 
@@ -72,7 +72,7 @@
     for (NSUInteger i = 0; i < [eq count]; i+=2) {
         EDSemver *left = [[EDSemver alloc] initWithString:[eq objectAtIndex:i]];
         EDSemver *right = [[EDSemver alloc] initWithString:[eq objectAtIndex:i+1]];
-        STAssertFalse([left isEqualTo:right], EQUAL_DESC);
+        XCTAssertFalse([left isEqualTo:right], EQUAL_DESC);
     }
 }
 

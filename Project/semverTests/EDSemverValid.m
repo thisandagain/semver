@@ -8,7 +8,7 @@
 
 #import "EDSemverHarness.h"
 
-@interface EDSemverValid : SenTestCase
+@interface EDSemverValid : XCTestCase
 @end
 
 @interface EDSemverValid ()
@@ -33,7 +33,7 @@
 {
     for (NSUInteger i = 0; i < [_validList count]; i++) {
         EDSemver *ver = [[EDSemver alloc] initWithString:[_validList objectAtIndex:i]];
-        STAssertTrue([ver isValid], VALID_DESC);
+        XCTAssertTrue([ver isValid], VALID_DESC);
     }
 }
 
@@ -41,7 +41,7 @@
 {
     for (NSUInteger i = 0; i < [_invalidList count]; i++) {
         EDSemver *ver = [[EDSemver alloc] initWithString:[_invalidList objectAtIndex:i]];
-        STAssertFalse([ver isValid], VALID_DESC);
+        XCTAssertFalse([ver isValid], VALID_DESC);
     }
 }
 

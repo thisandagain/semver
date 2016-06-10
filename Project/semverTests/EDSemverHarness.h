@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Andrew Sliwinski. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "EDSemver.h"
 
 #define MAJOR_DESC @"Major equals expected value."

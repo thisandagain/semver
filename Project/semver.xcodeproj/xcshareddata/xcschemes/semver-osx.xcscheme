@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,27 +14,27 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C390380F178615E400ECBCAC"
-               BuildableName = "semver.app"
-               BlueprintName = "semver"
+               BlueprintIdentifier = "01DA90451D0ADA9500D65599"
+               BuildableName = "semver-osx.app"
+               BlueprintName = "semver-osx"
                ReferencedContainer = "container:semver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3903835178615E400ECBCAC"
-               BuildableName = "semverTests.octest"
-               BlueprintName = "semverTests"
+               BlueprintIdentifier = "01DA90571D0ADA9500D65599"
+               BuildableName = "semver-osxTests.app"
+               BlueprintName = "semver-osxTests"
                ReferencedContainer = "container:semver.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,28 +42,32 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C390380F178615E400ECBCAC"
-            BuildableName = "semver.app"
-            BlueprintName = "semver"
+            BlueprintIdentifier = "01DA90451D0ADA9500D65599"
+            BuildableName = "semver-osx.app"
+            BlueprintName = "semver-osx"
             ReferencedContainer = "container:semver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C390380F178615E400ECBCAC"
-            BuildableName = "semver.app"
-            BlueprintName = "semver"
+            BlueprintIdentifier = "01DA90451D0ADA9500D65599"
+            BuildableName = "semver-osx.app"
+            BlueprintName = "semver-osx"
             ReferencedContainer = "container:semver.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,17 +75,18 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C390380F178615E400ECBCAC"
-            BuildableName = "semver.app"
-            BlueprintName = "semver"
+            BlueprintIdentifier = "01DA90451D0ADA9500D65599"
+            BuildableName = "semver-osx.app"
+            BlueprintName = "semver-osx"
             ReferencedContainer = "container:semver.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

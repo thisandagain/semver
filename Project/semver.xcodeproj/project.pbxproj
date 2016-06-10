@@ -7,48 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8AF8DAB318DCD9F900062D89 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903837178615E400ECBCAC /* SenTestingKit.framework */; };
-		8AF8DAB918DCD9F900062D89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8DAB718DCD9F900062D89 /* InfoPlist.strings */; };
-		8AF8DAC218DCD9FD00062D89 /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
-		8AF8DAC318DCDA0900062D89 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
-		8AF8DAC618DCDA3F00062D89 /* EDSemverEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3819684178676E100C5FE78 /* EDSemverEqualTo.m */; };
-		8AF8DAC718DCDA4100062D89 /* EDSemverGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */; };
-		8AF8DAC818DCDA4300062D89 /* EDSemverLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D242021786843C0019F61A /* EDSemverLessThan.m */; };
-		8AF8DAC918DCDA4500062D89 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
-		8AF8DACA18DCDA4700062D89 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
-		C381967817865BA500C5FE78 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
-		C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
-		C38196821786722200C5FE78 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
-		C3819685178676E100C5FE78 /* EDSemverEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3819684178676E100C5FE78 /* EDSemverEqualTo.m */; };
-		C3903838178615E400ECBCAC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903837178615E400ECBCAC /* SenTestingKit.framework */; };
-		C3903839178615E400ECBCAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903813178615E400ECBCAC /* UIKit.framework */; };
-		C390383A178615E400ECBCAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903815178615E400ECBCAC /* Foundation.framework */; };
-		C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3903840178615E400ECBCAC /* InfoPlist.strings */; };
-		C39038511786166E00ECBCAC /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
-		C3A8AB80178A39A000EE322C /* EDSemverGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */; };
-		C3D242031786843C0019F61A /* EDSemverLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D242021786843C0019F61A /* EDSemverLessThan.m */; };
+		01DA90161D0ADA5F00D65599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA90151D0ADA5F00D65599 /* main.m */; };
+		01DA90191D0ADA5F00D65599 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA90181D0ADA5F00D65599 /* AppDelegate.m */; };
+		01DA901C1D0ADA5F00D65599 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA901B1D0ADA5F00D65599 /* ViewController.m */; };
+		01DA901F1D0ADA5F00D65599 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DA901D1D0ADA5F00D65599 /* Main.storyboard */; };
+		01DA90211D0ADA5F00D65599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DA90201D0ADA5F00D65599 /* Assets.xcassets */; };
+		01DA90241D0ADA5F00D65599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DA90221D0ADA5F00D65599 /* LaunchScreen.storyboard */; };
+		01DA904A1D0ADA9500D65599 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA90491D0ADA9500D65599 /* AppDelegate.m */; };
+		01DA904F1D0ADA9500D65599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DA904E1D0ADA9500D65599 /* Assets.xcassets */; };
+		01DA90521D0ADA9500D65599 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DA90501D0ADA9500D65599 /* MainMenu.xib */; };
+		01DA90651D0ADAA700D65599 /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
+		01DA90661D0ADABA00D65599 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
+		01DA90671D0ADABC00D65599 /* EDSemverEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3819684178676E100C5FE78 /* EDSemverEqualTo.m */; };
+		01DA90681D0ADABE00D65599 /* EDSemverLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D242021786843C0019F61A /* EDSemverLessThan.m */; };
+		01DA90691D0ADAC100D65599 /* EDSemverGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */; };
+		01DA906A1D0ADAC500D65599 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
+		01DA906B1D0ADAC800D65599 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
+		01DA906C1D0ADAD700D65599 /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
+		01DA906D1D0ADADC00D65599 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
+		01DA906E1D0ADADE00D65599 /* EDSemverEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3819684178676E100C5FE78 /* EDSemverEqualTo.m */; };
+		01DA906F1D0ADAE000D65599 /* EDSemverGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8AB7F178A39A000EE322C /* EDSemverGreaterThan.m */; };
+		01DA90701D0ADAE300D65599 /* EDSemverLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D242021786843C0019F61A /* EDSemverLessThan.m */; };
+		01DA90711D0ADAE500D65599 /* EDSemverParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967717865BA500C5FE78 /* EDSemverParse.m */; };
+		01DA90721D0ADAE800D65599 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
+		01DA90741D0ADE4300D65599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DA90731D0ADE4300D65599 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8AF8DABD18DCD9F900062D89 /* PBXContainerItemProxy */ = {
+		01DA902B1D0ADA5F00D65599 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3903808178615E400ECBCAC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C3903835178615E400ECBCAC;
-			remoteInfo = semverTests;
+			remoteGlobalIDString = 01DA90111D0ADA5F00D65599;
+			remoteInfo = "semver-ios";
+		};
+		01DA90591D0ADA9500D65599 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3903808178615E400ECBCAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01DA90451D0ADA9500D65599;
+			remoteInfo = "semver-osx";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8AF8DA9B18DCD92B00062D89 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8AF8DAB218DCD9F900062D89 /* semverOSX Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "semverOSX Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DA90121D0ADA5F00D65599 /* semver-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "semver-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DA90151D0ADA5F00D65599 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01DA90171D0ADA5F00D65599 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		01DA90181D0ADA5F00D65599 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		01DA901A1D0ADA5F00D65599 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		01DA901B1D0ADA5F00D65599 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		01DA901E1D0ADA5F00D65599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01DA90201D0ADA5F00D65599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01DA90231D0ADA5F00D65599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01DA90251D0ADA5F00D65599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01DA902A1D0ADA5F00D65599 /* semver-iosTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "semver-iosTests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DA90301D0ADA5F00D65599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../semver-iosTests/Info.plist"; sourceTree = "<group>"; };
+		01DA90461D0ADA9500D65599 /* semver-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "semver-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DA90481D0ADA9500D65599 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		01DA90491D0ADA9500D65599 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		01DA904C1D0ADA9500D65599 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01DA904E1D0ADA9500D65599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01DA90511D0ADA9500D65599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		01DA90531D0ADA9500D65599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01DA90581D0ADA9500D65599 /* semver-osxTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "semver-osxTests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DA905E1D0ADA9500D65599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../semver-osxTests/Info.plist"; sourceTree = "<group>"; };
+		01DA90731D0ADE4300D65599 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8AF8DAB618DCD9F900062D89 /* semverOSX Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "semverOSX Tests-Info.plist"; sourceTree = "<group>"; };
 		8AF8DAB818DCD9F900062D89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AF8DABC18DCD9F900062D89 /* semverOSX Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "semverOSX Tests-Prefix.pch"; sourceTree = "<group>"; };
 		C336CFF4178BC2F300D35D67 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		C336CFF5178BC2F300D35D67 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C336CFF6178BC2F300D35D67 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		C373DFB118D0DDAB0019A2F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		C381967717865BA500C5FE78 /* EDSemverParse.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverParse.m; sourceTree = "<group>"; tabWidth = 4; };
 		C381967917865C0A00C5FE78 /* EDSemverHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSemverHarness.h; sourceTree = "<group>"; };
 		C381967E17865CB600C5FE78 /* EDSemverValid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSemverValid.m; sourceTree = "<group>"; };
@@ -59,8 +89,6 @@
 		C3903813178615E400ECBCAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3903815178615E400ECBCAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3903817178615E400ECBCAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C3903836178615E400ECBCAC /* semverTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = semverTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3903837178615E400ECBCAC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C390383F178615E400ECBCAC /* semverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "semverTests-Info.plist"; sourceTree = "<group>"; };
 		C3903841178615E400ECBCAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C390384E1786166E00ECBCAC /* EDSemver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EDSemver.h; path = ../EDSemver/EDSemver.h; sourceTree = "<group>"; };
@@ -73,27 +101,83 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8AF8DAAF18DCD9F900062D89 /* Frameworks */ = {
+		01DA900F1D0ADA5F00D65599 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF8DAB318DCD9F900062D89 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3903832178615E400ECBCAC /* Frameworks */ = {
+		01DA90271D0ADA5F00D65599 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3903838178615E400ECBCAC /* SenTestingKit.framework in Frameworks */,
-				C3903839178615E400ECBCAC /* UIKit.framework in Frameworks */,
-				C390383A178615E400ECBCAC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01DA90431D0ADA9500D65599 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01DA90551D0ADA9500D65599 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01DA90131D0ADA5F00D65599 /* semver-ios */ = {
+			isa = PBXGroup;
+			children = (
+				01DA90171D0ADA5F00D65599 /* AppDelegate.h */,
+				01DA90181D0ADA5F00D65599 /* AppDelegate.m */,
+				01DA901A1D0ADA5F00D65599 /* ViewController.h */,
+				01DA901B1D0ADA5F00D65599 /* ViewController.m */,
+				01DA901D1D0ADA5F00D65599 /* Main.storyboard */,
+				01DA90201D0ADA5F00D65599 /* Assets.xcassets */,
+				01DA90221D0ADA5F00D65599 /* LaunchScreen.storyboard */,
+				01DA90251D0ADA5F00D65599 /* Info.plist */,
+				01DA90141D0ADA5F00D65599 /* Supporting Files */,
+			);
+			path = "semver-ios";
+			sourceTree = "<group>";
+		};
+		01DA90141D0ADA5F00D65599 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01DA90151D0ADA5F00D65599 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01DA90471D0ADA9500D65599 /* semver-osx */ = {
+			isa = PBXGroup;
+			children = (
+				01DA90731D0ADE4300D65599 /* main.m */,
+				01DA90481D0ADA9500D65599 /* AppDelegate.h */,
+				01DA90491D0ADA9500D65599 /* AppDelegate.m */,
+				01DA904E1D0ADA9500D65599 /* Assets.xcassets */,
+				01DA90501D0ADA9500D65599 /* MainMenu.xib */,
+				01DA90531D0ADA9500D65599 /* Info.plist */,
+				01DA904B1D0ADA9500D65599 /* Supporting Files */,
+			);
+			path = "semver-osx";
+			sourceTree = "<group>";
+		};
+		01DA904B1D0ADA9500D65599 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01DA904C1D0ADA9500D65599 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8AF8DAB518DCD9F900062D89 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +192,7 @@
 		8AF8DAC418DCDA2900062D89 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				01DA90301D0ADA5F00D65599 /* Info.plist */,
 				C390383E178615E400ECBCAC /* Supporting Files */,
 			);
 			name = iOS;
@@ -116,6 +201,7 @@
 		8AF8DAC518DCDA2E00062D89 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
+				01DA905E1D0ADA9500D65599 /* Info.plist */,
 				8AF8DAB518DCD9F900062D89 /* Supporting Files */,
 			);
 			name = "OS X";
@@ -134,7 +220,6 @@
 			children = (
 				C381969C178679AF00C5FE78 /* InfoPlist.strings */,
 				C381969E178679AF00C5FE78 /* semver-Info.plist */,
-				C373DFB118D0DDAB0019A2F8 /* Default-568h@2x.png */,
 			);
 			name = Resources;
 			path = semver;
@@ -149,6 +234,8 @@
 				C39038521786167B00ECBCAC /* EDSemver */,
 				C390383D178615E400ECBCAC /* Tests */,
 				C3819696178679AF00C5FE78 /* Resources */,
+				01DA90131D0ADA5F00D65599 /* semver-ios */,
+				01DA90471D0ADA9500D65599 /* semver-osx */,
 				C3903812178615E400ECBCAC /* Frameworks */,
 				C3903811178615E400ECBCAC /* Products */,
 				C336CFF4178BC2F300D35D67 /* Base.xcconfig */,
@@ -160,8 +247,10 @@
 		C3903811178615E400ECBCAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3903836178615E400ECBCAC /* semverTests.octest */,
-				8AF8DAB218DCD9F900062D89 /* semverOSX Tests.octest */,
+				01DA90121D0ADA5F00D65599 /* semver-ios.app */,
+				01DA902A1D0ADA5F00D65599 /* semver-iosTests.app */,
+				01DA90461D0ADA9500D65599 /* semver-osx.app */,
+				01DA90581D0ADA9500D65599 /* semver-osxTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,8 +261,6 @@
 				C3903813178615E400ECBCAC /* UIKit.framework */,
 				C3903815178615E400ECBCAC /* Foundation.framework */,
 				C3903817178615E400ECBCAC /* CoreGraphics.framework */,
-				C3903837178615E400ECBCAC /* SenTestingKit.framework */,
-				8AF8DA9B18DCD92B00062D89 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,41 +303,75 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8AF8DAB118DCD9F900062D89 /* semverOSX Tests */ = {
+		01DA90111D0ADA5F00D65599 /* semver-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8AF8DABF18DCD9F900062D89 /* Build configuration list for PBXNativeTarget "semverOSX Tests" */;
+			buildConfigurationList = 01DA90351D0ADA5F00D65599 /* Build configuration list for PBXNativeTarget "semver-ios" */;
 			buildPhases = (
-				8AF8DAAE18DCD9F900062D89 /* Sources */,
-				8AF8DAAF18DCD9F900062D89 /* Frameworks */,
-				8AF8DAB018DCD9F900062D89 /* Resources */,
+				01DA900E1D0ADA5F00D65599 /* Sources */,
+				01DA900F1D0ADA5F00D65599 /* Frameworks */,
+				01DA90101D0ADA5F00D65599 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8AF8DABE18DCD9F900062D89 /* PBXTargetDependency */,
 			);
-			name = "semverOSX Tests";
-			productName = "semverOSX Tests";
-			productReference = 8AF8DAB218DCD9F900062D89 /* semverOSX Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			name = "semver-ios";
+			productName = "semver-ios";
+			productReference = 01DA90121D0ADA5F00D65599 /* semver-ios.app */;
+			productType = "com.apple.product-type.application";
 		};
-		C3903835178615E400ECBCAC /* semverTests */ = {
+		01DA90291D0ADA5F00D65599 /* semver-iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C390384B178615E400ECBCAC /* Build configuration list for PBXNativeTarget "semverTests" */;
+			buildConfigurationList = 01DA90361D0ADA5F00D65599 /* Build configuration list for PBXNativeTarget "semver-iosTests" */;
 			buildPhases = (
-				C3903831178615E400ECBCAC /* Sources */,
-				C3903832178615E400ECBCAC /* Frameworks */,
-				C3903833178615E400ECBCAC /* Resources */,
-				C3903834178615E400ECBCAC /* ShellScript */,
+				01DA90261D0ADA5F00D65599 /* Sources */,
+				01DA90271D0ADA5F00D65599 /* Frameworks */,
+				01DA90281D0ADA5F00D65599 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01DA902C1D0ADA5F00D65599 /* PBXTargetDependency */,
+			);
+			name = "semver-iosTests";
+			productName = "semver-iosTests";
+			productReference = 01DA902A1D0ADA5F00D65599 /* semver-iosTests.app */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		01DA90451D0ADA9500D65599 /* semver-osx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01DA905F1D0ADA9500D65599 /* Build configuration list for PBXNativeTarget "semver-osx" */;
+			buildPhases = (
+				01DA90421D0ADA9500D65599 /* Sources */,
+				01DA90431D0ADA9500D65599 /* Frameworks */,
+				01DA90441D0ADA9500D65599 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = semverTests;
-			productName = semverTests;
-			productReference = C3903836178615E400ECBCAC /* semverTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			name = "semver-osx";
+			productName = "semver-osx";
+			productReference = 01DA90461D0ADA9500D65599 /* semver-osx.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01DA90571D0ADA9500D65599 /* semver-osxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01DA90621D0ADA9500D65599 /* Build configuration list for PBXNativeTarget "semver-osxTests" */;
+			buildPhases = (
+				01DA90541D0ADA9500D65599 /* Sources */,
+				01DA90551D0ADA9500D65599 /* Frameworks */,
+				01DA90561D0ADA9500D65599 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01DA905A1D0ADA9500D65599 /* PBXTargetDependency */,
+			);
+			name = "semver-osxTests";
+			productName = "semver-osxTests";
+			productReference = 01DA90581D0ADA9500D65599 /* semver-osxTests.app */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -259,12 +380,23 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ED;
-				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Andrew Sliwinski";
 				TargetAttributes = {
-					8AF8DAB118DCD9F900062D89 = {
-						TestTargetID = C3903835178615E400ECBCAC;
+					01DA90111D0ADA5F00D65599 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					01DA90291D0ADA5F00D65599 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 01DA90111D0ADA5F00D65599;
+					};
+					01DA90451D0ADA9500D65599 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					01DA90571D0ADA9500D65599 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 01DA90451D0ADA9500D65599;
 					};
 				};
 			};
@@ -274,93 +406,145 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C3903807178615E400ECBCAC;
 			productRefGroup = C3903811178615E400ECBCAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3903835178615E400ECBCAC /* semverTests */,
-				8AF8DAB118DCD9F900062D89 /* semverOSX Tests */,
+				01DA90111D0ADA5F00D65599 /* semver-ios */,
+				01DA90291D0ADA5F00D65599 /* semver-iosTests */,
+				01DA90451D0ADA9500D65599 /* semver-osx */,
+				01DA90571D0ADA9500D65599 /* semver-osxTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8AF8DAB018DCD9F900062D89 /* Resources */ = {
+		01DA90101D0ADA5F00D65599 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF8DAB918DCD9F900062D89 /* InfoPlist.strings in Resources */,
+				01DA90241D0ADA5F00D65599 /* LaunchScreen.storyboard in Resources */,
+				01DA90211D0ADA5F00D65599 /* Assets.xcassets in Resources */,
+				01DA901F1D0ADA5F00D65599 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3903833178615E400ECBCAC /* Resources */ = {
+		01DA90281D0ADA5F00D65599 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01DA90441D0ADA9500D65599 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01DA904F1D0ADA9500D65599 /* Assets.xcassets in Resources */,
+				01DA90521D0ADA9500D65599 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01DA90561D0ADA9500D65599 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		C3903834178615E400ECBCAC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		8AF8DAAE18DCD9F900062D89 /* Sources */ = {
+		01DA900E1D0ADA5F00D65599 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF8DAC918DCDA4500062D89 /* EDSemverParse.m in Sources */,
-				8AF8DAC718DCDA4100062D89 /* EDSemverGreaterThan.m in Sources */,
-				8AF8DAC818DCDA4300062D89 /* EDSemverLessThan.m in Sources */,
-				8AF8DAC618DCDA3F00062D89 /* EDSemverEqualTo.m in Sources */,
-				8AF8DAC218DCD9FD00062D89 /* EDSemver.m in Sources */,
-				8AF8DAC318DCDA0900062D89 /* EDSemverBenchmark.m in Sources */,
-				8AF8DACA18DCDA4700062D89 /* EDSemverValid.m in Sources */,
+				01DA901C1D0ADA5F00D65599 /* ViewController.m in Sources */,
+				01DA90191D0ADA5F00D65599 /* AppDelegate.m in Sources */,
+				01DA90651D0ADAA700D65599 /* EDSemver.m in Sources */,
+				01DA90161D0ADA5F00D65599 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3903831178615E400ECBCAC /* Sources */ = {
+		01DA90261D0ADA5F00D65599 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39038511786166E00ECBCAC /* EDSemver.m in Sources */,
-				C381967817865BA500C5FE78 /* EDSemverParse.m in Sources */,
-				C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */,
-				C38196821786722200C5FE78 /* EDSemverBenchmark.m in Sources */,
-				C3819685178676E100C5FE78 /* EDSemverEqualTo.m in Sources */,
-				C3D242031786843C0019F61A /* EDSemverLessThan.m in Sources */,
-				C3A8AB80178A39A000EE322C /* EDSemverGreaterThan.m in Sources */,
+				01DA90661D0ADABA00D65599 /* EDSemverBenchmark.m in Sources */,
+				01DA90671D0ADABC00D65599 /* EDSemverEqualTo.m in Sources */,
+				01DA90691D0ADAC100D65599 /* EDSemverGreaterThan.m in Sources */,
+				01DA90681D0ADABE00D65599 /* EDSemverLessThan.m in Sources */,
+				01DA906A1D0ADAC500D65599 /* EDSemverParse.m in Sources */,
+				01DA906B1D0ADAC800D65599 /* EDSemverValid.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01DA90421D0ADA9500D65599 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01DA904A1D0ADA9500D65599 /* AppDelegate.m in Sources */,
+				01DA90741D0ADE4300D65599 /* main.m in Sources */,
+				01DA906C1D0ADAD700D65599 /* EDSemver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01DA90541D0ADA9500D65599 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01DA906D1D0ADADC00D65599 /* EDSemverBenchmark.m in Sources */,
+				01DA906E1D0ADADE00D65599 /* EDSemverEqualTo.m in Sources */,
+				01DA906F1D0ADAE000D65599 /* EDSemverGreaterThan.m in Sources */,
+				01DA90701D0ADAE300D65599 /* EDSemverLessThan.m in Sources */,
+				01DA90711D0ADAE500D65599 /* EDSemverParse.m in Sources */,
+				01DA90721D0ADAE800D65599 /* EDSemverValid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8AF8DABE18DCD9F900062D89 /* PBXTargetDependency */ = {
+		01DA902C1D0ADA5F00D65599 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3903835178615E400ECBCAC /* semverTests */;
-			targetProxy = 8AF8DABD18DCD9F900062D89 /* PBXContainerItemProxy */;
+			target = 01DA90111D0ADA5F00D65599 /* semver-ios */;
+			targetProxy = 01DA902B1D0ADA5F00D65599 /* PBXContainerItemProxy */;
+		};
+		01DA905A1D0ADA9500D65599 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01DA90451D0ADA9500D65599 /* semver-osx */;
+			targetProxy = 01DA90591D0ADA9500D65599 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		01DA901D1D0ADA5F00D65599 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01DA901E1D0ADA5F00D65599 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01DA90221D0ADA5F00D65599 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01DA90231D0ADA5F00D65599 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		01DA90501D0ADA9500D65599 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01DA90511D0ADA9500D65599 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		8AF8DAB718DCD9F900062D89 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -380,61 +564,233 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8AF8DAC018DCD9F900062D89 /* Debug */ = {
+		01DA90311D0ADA5F00D65599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "semverOSX Tests/semverOSX Tests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "semverOSX Tests/semverOSX Tests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				INFOPLIST_FILE = "semver-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diy.semver-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8AF8DAC118DCD9F900062D89 /* Release */ = {
+		01DA90321D0ADA5F00D65599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "semverOSX Tests/semverOSX Tests-Prefix.pch";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "semverOSX Tests/semverOSX Tests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				INFOPLIST_FILE = "semver-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diy.semver-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		01DA90331D0ADA5F00D65599 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "semver-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diy.semver-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/semver-ios.app/semver-ios";
+			};
+			name = Debug;
+		};
+		01DA90341D0ADA5F00D65599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "semver-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diy.semver-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/semver-ios.app/semver-ios";
+			};
+			name = Release;
+		};
+		01DA90601D0ADA9500D65599 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "semver-osx/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diy.semver-osx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		01DA90611D0ADA9500D65599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "semver-osx/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diy.semver-osx";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		01DA90631D0ADA9500D65599 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "semver-osxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diy.semver-osxTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/semver-osx.app/Contents/MacOS/semver-osx";
+			};
+			name = Debug;
+		};
+		01DA90641D0ADA9500D65599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "semver-osxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diy.semver-osxTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/semver-osx.app/Contents/MacOS/semver-osx";
 			};
 			name = Release;
 		};
@@ -450,11 +806,15 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -484,10 +844,13 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -500,62 +863,46 @@
 			};
 			name = Release;
 		};
-		C390384C178615E400ECBCAC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "semver/semver-Prefix.pch";
-				INFOPLIST_FILE = "semverTests/semverTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		C390384D178615E400ECBCAC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "semver/semver-Prefix.pch";
-				INFOPLIST_FILE = "semverTests/semverTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8AF8DABF18DCD9F900062D89 /* Build configuration list for PBXNativeTarget "semverOSX Tests" */ = {
+		01DA90351D0ADA5F00D65599 /* Build configuration list for PBXNativeTarget "semver-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8AF8DAC018DCD9F900062D89 /* Debug */,
-				8AF8DAC118DCD9F900062D89 /* Release */,
+				01DA90311D0ADA5F00D65599 /* Debug */,
+				01DA90321D0ADA5F00D65599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		01DA90361D0ADA5F00D65599 /* Build configuration list for PBXNativeTarget "semver-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01DA90331D0ADA5F00D65599 /* Debug */,
+				01DA90341D0ADA5F00D65599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		01DA905F1D0ADA9500D65599 /* Build configuration list for PBXNativeTarget "semver-osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01DA90601D0ADA9500D65599 /* Debug */,
+				01DA90611D0ADA9500D65599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		01DA90621D0ADA9500D65599 /* Build configuration list for PBXNativeTarget "semver-osxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01DA90631D0ADA9500D65599 /* Debug */,
+				01DA90641D0ADA9500D65599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C390380B178615E400ECBCAC /* Build configuration list for PBXProject "semver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3903846178615E400ECBCAC /* Debug */,
 				C3903847178615E400ECBCAC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C390384B178615E400ECBCAC /* Build configuration list for PBXNativeTarget "semverTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C390384C178615E400ECBCAC /* Debug */,
-				C390384D178615E400ECBCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
