@@ -13,17 +13,14 @@
 @property (readonly) NSInteger major;
 @property (readonly) NSInteger minor;
 @property (readonly) NSInteger patch;
-@property (readonly) NSString *prerelease;
-@property (readonly) NSString *build;
+@property (readonly, nullable) NSString *prerelease;
+@property (readonly, nullable) NSString *build;
 
-+ (NSString *)spec;
-+ (instancetype)semverWithString:(NSString *)aString;
++ (nonnull NSString *)spec;
++ (nonnull instancetype)semverWithString:(nonnull NSString *)aString;
 
-- (instancetype)initWithString:(NSString *)aString;
-- (NSComparisonResult)compare:(EDSemver *)aVersion;
-- (BOOL)isEqualTo:(EDSemver *)aVersion;
-- (BOOL)isLessThan:(EDSemver *)aVersion;
-- (BOOL)isGreaterThan:(EDSemver *)aVersion;
+- (nonnull instancetype)initWithString:(nonnull NSString *)aString;
+- (NSComparisonResult)compare:(nonnull EDSemver *)aVersion;
 - (BOOL)isValid;
 
 @end
