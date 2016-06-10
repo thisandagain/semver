@@ -21,31 +21,27 @@ return [version major]; // 22
 
 ### Properties
 ```objective-c
-@property (readonly) BOOL isValid;
 @property (readonly) NSInteger major;
 @property (readonly) NSInteger minor;
 @property (readonly) NSInteger patch;
-@property (readonly) NSString *prerelease;
-@property (readonly) NSString *build;
+@property (readonly, nullable) NSString *prerelease;
+@property (readonly, nullable) NSString *build;
 ```
 
 ### Methods
 ```objective-c
-+ (NSString *)spec;
-+ (instancetype)semverWithString:(NSString *)aString;
++ (nonnull NSString *)spec;
++ (nonnull instancetype)semverWithString:(nonnull NSString *)aString;
 
-- (instancetype)initWithString:(NSString *)aString;
-- (NSComparisonResult)compare:(EDSemver *)aVersion;
-- (BOOL)isEqualTo:(EDSemver *)aVersion;
-- (BOOL)isLessThan:(EDSemver *)aVersion;
-- (BOOL)isGreaterThan:(EDSemver *)aVersion;
+- (nonnull instancetype)initWithString:(nonnull NSString *)aString;
+- (NSComparisonResult)compare:(nonnull EDSemver *)aVersion;
 - (BOOL)isValid;
 ```
 
 ---
 
 ### Testing
-The [test suite](https://github.com/thisandagain/semver/tree/master/Project/semverTests) for `EDSemver` is built using OCUnit. To run the test suite, simply open the project in Xcode and choose "test" from the Product menu. Please run and augment the tests prior to submitting a pull request.
+The [test suite](https://github.com/thisandagain/semver/tree/master/Project/semverTests) for `EDSemver` is built using XCTest. To run the test suite, simply open the project in Xcode and choose "test" from the Product menu. Please run and augment the tests prior to submitting a pull request.
 
 ### ARC
 EDSemver is built using ARC. If you are including EDSemver in a project that **does not** use [Automatic Reference Counting (ARC)](http://developer.apple.com/library/ios/#releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html), you will need to set the `-fobjc-arc` compiler flag on all of the EDSemver source files. To do this in Xcode, go to your active target and select the "Build Phases" tab. Now select all EDSemver source files, press Enter, insert `-fobjc-arc` and then "Done" to enable ARC for EDSemver.
