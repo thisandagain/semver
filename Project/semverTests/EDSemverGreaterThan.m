@@ -8,7 +8,7 @@
 
 #import "EDSemverHarness.h"
 
-@interface EDSemverGreaterThan : SenTestCase
+@interface EDSemverGreaterThan : XCTestCase
 @end
 
 @implementation EDSemverGreaterThan
@@ -45,7 +45,7 @@
     for (NSUInteger i = 0; i < [eq count]; i+=2) {
         EDSemver *left = [[EDSemver alloc] initWithString:[eq objectAtIndex:i]];
         EDSemver *right = [[EDSemver alloc] initWithString:[eq objectAtIndex:i+1]];
-        STAssertEquals([left compare:right], NSOrderedDescending, [NSString stringWithFormat:@"Expected %@ to be greater than %@", left, right]);
+        XCTAssertEqual([left compare:right], NSOrderedDescending, @"Expected %@ to be greater than %@", left, right);
     }
 }
 

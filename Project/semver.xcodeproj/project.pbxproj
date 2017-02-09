@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8AF8DAB318DCD9F900062D89 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903837178615E400ECBCAC /* SenTestingKit.framework */; };
 		8AF8DAB918DCD9F900062D89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8DAB718DCD9F900062D89 /* InfoPlist.strings */; };
 		8AF8DAC218DCD9FD00062D89 /* EDSemver.m in Sources */ = {isa = PBXBuildFile; fileRef = C390384F1786166E00ECBCAC /* EDSemver.m */; };
 		8AF8DAC318DCDA0900062D89 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
@@ -20,7 +19,6 @@
 		C381967F17865CB600C5FE78 /* EDSemverValid.m in Sources */ = {isa = PBXBuildFile; fileRef = C381967E17865CB600C5FE78 /* EDSemverValid.m */; };
 		C38196821786722200C5FE78 /* EDSemverBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = C38196811786722200C5FE78 /* EDSemverBenchmark.m */; };
 		C3819685178676E100C5FE78 /* EDSemverEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3819684178676E100C5FE78 /* EDSemverEqualTo.m */; };
-		C3903838178615E400ECBCAC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903837178615E400ECBCAC /* SenTestingKit.framework */; };
 		C3903839178615E400ECBCAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903813178615E400ECBCAC /* UIKit.framework */; };
 		C390383A178615E400ECBCAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3903815178615E400ECBCAC /* Foundation.framework */; };
 		C3903842178615E400ECBCAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3903840178615E400ECBCAC /* InfoPlist.strings */; };
@@ -41,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		8AF8DA9B18DCD92B00062D89 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8AF8DAB218DCD9F900062D89 /* semverOSX Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "semverOSX Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AF8DAB218DCD9F900062D89 /* semverOSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "semverOSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF8DAB618DCD9F900062D89 /* semverOSX Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "semverOSX Tests-Info.plist"; sourceTree = "<group>"; };
 		8AF8DAB818DCD9F900062D89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AF8DABC18DCD9F900062D89 /* semverOSX Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "semverOSX Tests-Prefix.pch"; sourceTree = "<group>"; };
@@ -59,8 +57,7 @@
 		C3903813178615E400ECBCAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3903815178615E400ECBCAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3903817178615E400ECBCAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C3903836178615E400ECBCAC /* semverTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = semverTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3903837178615E400ECBCAC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C3903836178615E400ECBCAC /* semverTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = semverTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390383F178615E400ECBCAC /* semverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "semverTests-Info.plist"; sourceTree = "<group>"; };
 		C3903841178615E400ECBCAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C390384E1786166E00ECBCAC /* EDSemver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EDSemver.h; path = ../EDSemver/EDSemver.h; sourceTree = "<group>"; };
@@ -77,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF8DAB318DCD9F900062D89 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3903838178615E400ECBCAC /* SenTestingKit.framework in Frameworks */,
 				C3903839178615E400ECBCAC /* UIKit.framework in Frameworks */,
 				C390383A178615E400ECBCAC /* Foundation.framework in Frameworks */,
 			);
@@ -160,8 +155,8 @@
 		C3903811178615E400ECBCAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3903836178615E400ECBCAC /* semverTests.octest */,
-				8AF8DAB218DCD9F900062D89 /* semverOSX Tests.octest */,
+				C3903836178615E400ECBCAC /* semverTests.app */,
+				8AF8DAB218DCD9F900062D89 /* semverOSX Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,7 +167,6 @@
 				C3903813178615E400ECBCAC /* UIKit.framework */,
 				C3903815178615E400ECBCAC /* Foundation.framework */,
 				C3903817178615E400ECBCAC /* CoreGraphics.framework */,
-				C3903837178615E400ECBCAC /* SenTestingKit.framework */,
 				8AF8DA9B18DCD92B00062D89 /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -231,8 +225,8 @@
 			);
 			name = "semverOSX Tests";
 			productName = "semverOSX Tests";
-			productReference = 8AF8DAB218DCD9F900062D89 /* semverOSX Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 8AF8DAB218DCD9F900062D89 /* semverOSX Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		C3903835178615E400ECBCAC /* semverTests */ = {
 			isa = PBXNativeTarget;
@@ -249,8 +243,8 @@
 			);
 			name = semverTests;
 			productName = semverTests;
-			productReference = C3903836178615E400ECBCAC /* semverTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = C3903836178615E400ECBCAC /* semverTests.app */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -388,10 +382,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "semverOSX Tests/semverOSX Tests-Prefix.pch";
@@ -403,10 +394,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "semverOSX Tests/semverOSX Tests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -420,10 +411,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "semverOSX Tests/semverOSX Tests-Prefix.pch";
@@ -431,10 +419,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "semverOSX Tests/semverOSX Tests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -506,12 +494,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "semver/semver-Prefix.pch";
 				INFOPLIST_FILE = "semverTests/semverTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -521,12 +510,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "semver/semver-Prefix.pch";
 				INFOPLIST_FILE = "semverTests/semverTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
