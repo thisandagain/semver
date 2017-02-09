@@ -101,25 +101,29 @@ static NSString *const IGNORE_EQ                = @"=";
 	if (self.prerelease.length > 0 || aVersion.prerelease.length > 0) {
 		if (self.prerelease.length > 0 && aVersion.prerelease.length == 0) return NSOrderedAscending;
 		if (self.prerelease.length == 0 && aVersion.prerelease.length > 0) return NSOrderedDescending;
-        return [self.prerelease compare:aVersion.prerelease];
+        return [self.prerelease compare:(NSString * _Nonnull)aVersion.prerelease];
     }
 
 	return NSOrderedSame;
 }
 
-- (BOOL)isEqualTo:(EDSemver *)aVersion
+
+- (BOOL)isEqualTo:(id)aVersion
 {
-    return [self compare:aVersion] == NSOrderedSame;
+    if(![aVersion isKindOfClass:[self class]]) return NO;
+    return [self compare:(EDSemver * _Nonnull)aVersion] == NSOrderedSame;
 }
 
-- (BOOL)isLessThan:(EDSemver *)aVersion
+- (BOOL)isLessThan:(id)aVersion
 {
-    return [self compare:aVersion] == NSOrderedAscending;
+    if(![aVersion isKindOfClass:[self class]]) return NO;
+    return [self compare:(EDSemver * _Nonnull)aVersion] == NSOrderedAscending;
 }
 
-- (BOOL)isGreaterThan:(EDSemver *)aVersion
+- (BOOL)isGreaterThan:(id)aVersion
 {
-    return [self compare:aVersion] == NSOrderedDescending;
+    if(![aVersion isKindOfClass:[self class]]) return NO;
+    return [self compare:(EDSemver * _Nonnull)aVersion] == NSOrderedDescending;
 }
 
 - (NSString *)description

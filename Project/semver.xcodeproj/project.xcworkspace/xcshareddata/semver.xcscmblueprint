@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "18A1F38BD1FC8DF83C548633355879F9A1853992",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "18A1F38BD1FC8DF83C548633355879F9A1853992" : 0,
+    "F470C7F60AC7DE9ED716F441C19F1DAE484E1627" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DACB4825-C818-460A-98D5-8657F0A4100A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "18A1F38BD1FC8DF83C548633355879F9A1853992" : "semver\/",
+    "F470C7F60AC7DE9ED716F441C19F1DAE484E1627" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "semver",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Project\/semver.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thisandagain\/semver.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "18A1F38BD1FC8DF83C548633355879F9A1853992"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:nrbrook\/lifestylelock-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F470C7F60AC7DE9ED716F441C19F1DAE484E1627"
+    }
+  ]
+}
