@@ -1,0 +1,5 @@
+
+#include "Release.xcconfig"
+
+WRAPPER_EXTENSION = framework
+SKIP_INSTALL = YES
