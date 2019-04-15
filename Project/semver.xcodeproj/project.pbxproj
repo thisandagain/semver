@@ -402,7 +402,7 @@
 			};
 			buildConfigurationList = C390380B178615E400ECBCAC /* Build configuration list for PBXProject "semver" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
