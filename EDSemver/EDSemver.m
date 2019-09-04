@@ -126,6 +126,10 @@ static NSString *const IGNORE_EQ                = @"=";
     return [self compare:(EDSemver * _Nonnull)aVersion] == NSOrderedDescending;
 }
 
+- (BOOL)isEqual:(id)object {
+	return [self isEqualTo:object];
+}
+
 - (NSString *)description
 {
 	return self.original;
