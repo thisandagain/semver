@@ -101,12 +101,45 @@ static NSString *const IGNORE_EQ                = @"=";
 	if (self.prerelease.length > 0 || aVersion.prerelease.length > 0) {
 		if (self.prerelease.length > 0 && aVersion.prerelease.length == 0) return NSOrderedAscending;
 		if (self.prerelease.length == 0 && aVersion.prerelease.length > 0) return NSOrderedDescending;
-        return [self.prerelease compare:(NSString * _Nonnull)aVersion.prerelease];
+        return [self comparePrerelease:aVersion.prerelease];
     }
 
 	return NSOrderedSame;
 }
 
+- (NSComparisonResult)comparePrerelease:(NSString *)aPrerelease
+{
+    NSArray *aPr = [self parse:aPrerelease strict:NO];
+    NSUInteger minCount = self.pr.count < aPr.count ? self.pr.count : aPr.count;
+    NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
+    NSString *part, *aPart;
+    NSNumber *numPart, *aNumPart;
+    NSComparisonResult result;
+    for (NSUInteger i = 0; i < minCount; i++) {
+        part = self.pr[i];
+        aPart = aPr[i];
+        numPart = [nf numberFromString:part];
+        aNumPart = [nf numberFromString:aPart];
+
+        if (numPart && aNumPart) {
+            result = [numPart compare:aNumPart];
+            if (result != NSOrderedSame) {
+                return result;
+            }
+        } else if (!numPart && aNumPart) {
+            return NSOrderedDescending;
+        } else if (numPart && !aNumPart) {
+            return NSOrderedAscending;
+        } else {
+            result = [part compare:aPart];
+            if (result != NSOrderedSame) {
+                return result;
+            }
+        }
+    }
+
+    return [@(self.pr.count) compare:@(aPr.count)];
+}
 
 - (BOOL)isEqualTo:(id)aVersion
 {
