@@ -21,10 +21,10 @@ let package = Package(
         .target(
             name: "Semver",
             dependencies: [],
-            path: "EDSemver/",
-            publicHeadersPath: "EDSemver",
+            path: "EDSemver",
+            publicHeadersPath: ".",
             cSettings: [
-                .headerSearchPath("EDSemver"),
+                .headerSearchPath("."),
             ]
             )
     ]
