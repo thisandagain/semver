@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#ifndef EDSEMVER_EDSEMVER_H
+#define EDSEMVER_EDSEMVER_H
+
 /**
  `EDSemver` is a helper library for Objective-C based on the 2.0.0 spec of [Semantic Versioning](https://semver.org/).
  */
@@ -102,3 +105,5 @@
 - (BOOL)isValid;
 
 @end
+
+#endif
